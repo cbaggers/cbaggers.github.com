@@ -3,7 +3,7 @@ layout: post
 title: Lisp, OpenGL and Uninterrupted development
 description:
 category:
-tags: ["lisp","OpenGL","study","slime"]
+tags: ['lisp', 'OpenGL', 'study', 'slime']
 ---
 
 As with anything I want to learn, it seems I need a project to drive me. The project is often WAY above my ability but it makes for a very motivating goal to keep in mind while trudging through the more tedious/mind-braking parts of whatever I'm studying.
