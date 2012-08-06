@@ -6,6 +6,9 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
 
+# add this line to add pagination
+paginate: 10
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
