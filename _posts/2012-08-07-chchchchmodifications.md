@@ -2,6 +2,7 @@
 layout: post
 title: Ch-ch-ch-ch-modifications
 description:
+date: 2012-08-07 20:05:00
 category:
 tags: [lisp, cepl, opengl]
 ---
