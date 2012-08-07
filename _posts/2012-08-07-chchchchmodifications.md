@@ -14,7 +14,7 @@ Its definitely not 'lispy' enough yet but pushing data into buffers, making vaos
 
 Here is a quick video of me playing around with a small chunk of code which handles the rotation of the objects in the scene. Notice how errors don't crash the program and I can simply recompile the offending function and carry on. Also note that the repl still works so I can mess around with the camera position from there.
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/qcahUrvytqs" frameborder="0"></iframe>
+<iframe width="800" height="600" src="http://www.youtube.com/embed/qcahUrvytqs" frameborder="0"></iframe>
 
 I'm now bored of these little 3D whatchamagigs now so I need to write an importer .obj files so I can get something interesting up on the screen.
 
