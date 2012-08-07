@@ -4,7 +4,7 @@ title: Ch-ch-ch-ch-modifications
 description:
 date: 2012-08-07 20:05:00
 category:
-tags: [lisp, cepl, opengl]
+tags: ['lisp', 'cepl', 'opengl']
 ---
 
 Well I've been very quiet recently and that's mainly down the my mild addiction to playing with Lisp. I been beavering through  [Let Over Lambda](http://letoverlambda.com/) which ia fantastic book on the crazy stuff in common lisp (code that writes code etc) which has been bending my mind plenty. 
