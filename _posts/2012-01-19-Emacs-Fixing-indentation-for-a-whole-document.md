@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Emacs: Fixing indentation for a whole document
+title: Emacs - Fixing indentation for a whole document
 description: 
 category:
 tags: ['']

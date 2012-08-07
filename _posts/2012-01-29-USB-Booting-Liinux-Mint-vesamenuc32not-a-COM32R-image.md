@@ -1,6 +1,6 @@
 ---
 layout: post
-title: USB Booting Liinux Mint: vesamenu.c32:not a COM32R image
+title: USB Booting Liinux Mint - vesamenu.c32 not a COM32R image
 description: 
 category:
 tags: ['']

@@ -10,4 +10,4 @@ I needed to do this a little while back while making a pythonic circular list. T
 
 
 
-<a href="http://docs.python.org/release/2.3/whatsnew/section-slices.html">Read all about it here!</a> (this doco is a little old, but communicates the principles well)
+[Read all about it here!](http://docs.python.org/release/2.3/whatsnew/section-slices.html) (this doco is a little old, but communicates the principles well)

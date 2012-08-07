@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LDAP: Binding to a specific server
+title: LDAP and Binding to a specific server
 description: 
 category:
 tags: ['python']

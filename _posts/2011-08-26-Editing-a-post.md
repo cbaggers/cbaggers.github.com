@@ -10,25 +10,25 @@ Here's what you do to change a post's title with my library:
 
 
 
-<pre class="brush: python;">
-
-#get most recent post
-
-post = blog[0]
 
 
+    # get most recent post
 
-#edit the posts title
-
-post.title = "hey a new title!"
+    post = blog[0]
 
 
 
-#push post back to blog
+    # edit the posts title
 
-blog[0] = post
+    post.title = "hey a new title!"
 
-</pre>
+
+
+    # push post back to blog
+
+    blog[0] = post
+
+
 
 
 
