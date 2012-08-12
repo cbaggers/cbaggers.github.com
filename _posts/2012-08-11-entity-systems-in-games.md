@@ -12,15 +12,15 @@ One of the obvious first steps is working out how I will manage all the differen
 
 It doesnt take much googling to see that object-orientated programming is not actually the way to go. This seems strange at first as OO can seem a natural fit for defining types of object. I mean you can have something like this:
 
-character
-  |
-  |__human
-  |   |___soldier
-  |   |___civilian
-  |
-  |__alien
-       |____alien queen
-       |____alien soldier
+    character
+      |
+      |__human
+      |   |___soldier
+      |   |___civilian
+      |
+      |__alien
+           |____alien queen
+           |____alien soldier
 
 But it turns out that in real life, things change (who knew?!) and, as new type of object are need in the game, functionality that use to be specific to one class of game object has to be moved up the tree.
 
