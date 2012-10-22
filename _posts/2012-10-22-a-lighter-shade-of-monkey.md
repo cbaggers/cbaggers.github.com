@@ -18,7 +18,7 @@ What I'm really pleased with is that I didn't need to be rigorous which checking
 
      2 x 4 = 4 x 2 
 
-..It is not the same when using matrices. I frankly was confused with the orders when I first ran the demo and it showed! The monkey head was all over the place and the light wasn't working. What was wonderful was I was able just to keep swapping things around until I got it right. I caused a lot of bugs in the process but as you are still able to compile parts of your code while the debugger is waiting I was able to undo my mess and carry on running the demo as if I wasn't incompetent!
+..It is not the same when using matrices. I frankly was confused with the orders when I first ran the demo and it showed! The monkey head was all over the place and the light wasn't working. What was wonderful was I was able just to keep swapping things around until I got it right. I caused a lot of bugs in the process but, as you are still able to compile parts of your code while the debugger is waiting, I was able to undo my mess and carry on running the demo as if I wasn't incompetent!
 
 All in all I'm pretty chuffed with all of this and have plenty more to show too. I will defintely have to write a long post about all the work I have been doing on the opengl wrapper part of CEPL, it makes the code much easier to write, and read for that matter! 
 
