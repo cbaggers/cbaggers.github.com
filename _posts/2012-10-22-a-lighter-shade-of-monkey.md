@@ -23,4 +23,5 @@ What I'm really pleased with is that I didn't need to be rigorous which checking
 All in all I'm pretty chuffed with all of this and have plenty more to show too. I will defintely have to write a long post about all the work I have been doing on the opengl wrapper part of CEPL, it makes the code much easier to write, and read for that matter! 
 
 Well that's all for another day,
+
 Take care.
