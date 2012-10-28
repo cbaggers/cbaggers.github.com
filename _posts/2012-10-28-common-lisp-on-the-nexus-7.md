@@ -9,7 +9,7 @@ tags: ['arm', 'nexus7', 'ubuntu', 'lisp', 'common lisp']
 
 Right now I've got Ubuntu on this Nexus, I'm going to want to code something for it. It's already set up for C and python dev but not a drop of Lisp in sight (*gasp*)! 
 
-In this post I'm going to get two versions up and running on the Nexus. ECL and Clozure.
+In this post I'm going to get two versions up and running on the Nexus. [ECL](http://ecls.sourceforge.net/) and [Clozure](http://ccl.clozure.com/).
 
 To make this easier for yourself make sure you have installed ssh so you can do all of this from a real keyboard!
 

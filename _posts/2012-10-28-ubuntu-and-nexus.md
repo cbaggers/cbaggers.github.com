@@ -14,7 +14,7 @@ Given the above blurry video of Ubuntu on the Nexus 7 and knowing that in it's c
 Well I just have so let me explain my logic!
 I use android, I like it, I have no hatred of Apple or Google but while I have moved more of my computing life into software that is open, I have moved more of my personal life into services which are not.
 
-This has been growing on my mind more and more lately and while I'm not ready to completely pull myself from these services I do know that I must start looking. There have been plenty of news stories recently which should serve as warning to where these services are heading and the kind of problems which will increasingly arise.
+This has been growing on my mind more and more lately and while I'm not ready to completely pull myself from these services I do know that I must start looking. There have been plenty of [news stories](http://talkweb.eu/openweb/1842) recently which should serve as warning to where these services are heading and the kind of problems which will increasingly arise.
 
 My phone is my biggest and most continuous link to proprietary services, namely google mail, search, maps, etc. By following along with the development of Ubuntu on mobile devices I hope I can lay the groundwork for my own move to an open source based mobile life. 
 
