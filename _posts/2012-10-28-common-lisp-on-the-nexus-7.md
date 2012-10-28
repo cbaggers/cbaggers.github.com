@@ -2,7 +2,7 @@
 layout: post
 title: Common Lisp on the Nexus 7
 description:
-date: 2012-10-28 10:29:38
+date: 2012-10-28 16:45:38
 category:
 tags: ['arm', 'nexus7', 'ubuntu', 'lisp', 'common lisp']
 ---
