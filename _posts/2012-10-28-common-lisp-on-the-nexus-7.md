@@ -16,7 +16,7 @@ To make this easier for yourself make sure you have installed ssh so you can do 
     sudo apt-get install ssh
 
 
-## ECL
+### ECL
 ECL is a great fit for this platform as it compiles down to C code so the executables are small and the tight integration with the FFI will make this very useful. Also it is super easy to install as it is in the repos.
 
     sudo apt-get install ecl
@@ -24,7 +24,7 @@ ECL is a great fit for this platform as it compiles down to C code so the execut
 and your done! Obviously your going to want to have more than just the repl so further down in this post we will look at installing Emacs and Slime.
 
 
-## Clozure
+### Clozure
 Next is Clozure. Now I'm usually working in SBCL when I'm on a regular machine (mainly as that's what my mate set me up with when I started learning!) but Clozure (I believe) has had an Arm port for a while longer and also SBCL's install process for Arm was a bit hairy for a beginner like me.
 
 Setting up Clozure involves a little bit more work than ECL, but not by much.
@@ -66,7 +66,7 @@ Now run:
 And clozure will be rebuilt. This will take a few minutes so keep yourself busy with a little victory dance!
 
 
-## Editor
+### Editor
 Wonderful, so now I want an editor to play around with. Unfortunately I am not versed in Vim so I can't provide and info for you Vim fans but I do use Emacs so here goes!:
 
 Well the first order of buisness is to get Emacs. Now it may seem overkill to have this on your device, you may prefer just to install swank and use your desktop but for me I'd like to ssh in an use Emacs from the command line.
@@ -102,6 +102,6 @@ Now we just need to add the following to the .emacs file:
 
     (require 'slime)
 
-## Done!
+### Done!
 Well thats all done! I'll try and keep this updated with any progress I make on the tablet. I'm very excited to see what happens next.
 Ciao
