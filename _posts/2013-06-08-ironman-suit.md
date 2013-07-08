@@ -2,7 +2,7 @@
 layout: post
 title: Ironman Armor Build
 description:
-date: 2012-10-28 10:56:05
+date: 2013-06-08 10:00:05
 category:
 tags: ['hackspace', 'cosplay', 'armor']
 ---
