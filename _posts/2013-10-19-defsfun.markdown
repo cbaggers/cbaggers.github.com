@@ -1,0 +1,23 @@
+---
+layout: post
+title: defsfun
+description:
+date: 2013-10-19 18:49:00
+category:
+tags: ['lisp', 'cepl']
+---
+
+One of the recent changes to CEPL has been to add the defsfun macro. This allows defining a shader function that doesnt belong to particular stage, if you use it in a shader it justs gets added to the code. 
+
+Here is an example of one:
+
+    (defsfun sphere ((p :vec3) (r :float)) 
+      (return (- (length (* rot p)) r)))
+
+Now the goal of Varjo was to make shader code look and feel like lisp so the following thought should have been obvious to me from the start but it wasnt. The thought is that if this is so nearly lisp then I could implement lisp versions of a few functions and have a lisp version of a shader that I can run locally for easy testing.
+
+Again, this should have been obvious but I'm quite excited about the posibilities. As I have alreay wrapped the datatypes I can just pass the local version a c-array rather than a gpu array and get it to work.
+
+Obviously the local versions would be too slow to use for rendering but would be great for testing and development in the repl. Also as the shader functions require types w can translate these into declares that will help with the efficiency.
+
+This is a fair way down my list of things to do but after I have nailed time and space abstractions down a bit I will revisit this.
