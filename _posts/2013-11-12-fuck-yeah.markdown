@@ -1,0 +1,28 @@
+---
+layout: post
+title: FUCK YEAH
+description:
+date: 2013-11-12 23:58:00
+category:
+tags: ['lisp', 'cepl']
+---
+
+    #<CODE {100752B7A3}>
+    --------------------
+    Class: #<STANDARD-CLASS CODE>
+    --------------------
+     Group slots by inheritance [ ]
+     Sort slots alphabetically  [X]
+
+    All Slots:
+    [ ]  CURRENT-LINE = "mix(1.0f,2.0f,0.5f)"
+    [ ]  INVARIANT    = NIL
+    [ ]  OUT-VARS     = NIL
+    [ ]  RETURNS      = NIL
+    [ ]  TO-BLOCK     = NIL
+    [ ]  TO-TOP       = NIL
+    [ ]  TYPE         = #<V-FLOAT {100751FFE3}>
+
+    [set value]  [make unbound]
+
+slime-inspector never looked so good!
