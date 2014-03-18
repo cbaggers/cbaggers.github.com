@@ -14,7 +14,7 @@ Also I have lots of things I want to add,fix & tweak for my lisp projects so wat
 Hope you are all well,
 Ciao
 
-Here is the a quick preview of what we have been up to :)
+Here is the a quick preview of what we have been up to!
 
-
+<img src="/assets/images/jst1.jpg" />
 
