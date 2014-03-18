@@ -16,4 +16,5 @@ Ciao
 
 Here is the a quick preview of what we have been up to :)
 
-<img src="/assets/images/jst1.jpg" />
+
+
