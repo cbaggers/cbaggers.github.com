@@ -8,11 +8,10 @@ tags: ['lisp', 'cepl']
 ---
 
     #<CODE {100752B7A3}>
-    - - - - - - - - - -
+    
     Class: #<STANDARD-CLASS CODE>
-    - - - - - - - - - -
-     Group slots by inheritance [ ]
-     Sort slots alphabetically  [X]
+    Group slots by inheritance [ ]
+    Sort slots alphabetically  [X]
 
     All Slots:
     [ ]  CURRENT-LINE = "mix(1.0f,2.0f,0.5f)"

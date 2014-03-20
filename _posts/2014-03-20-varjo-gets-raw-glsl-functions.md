@@ -15,9 +15,9 @@ The body however is a string and as such I am not doing any checks to ensure the
 
 This is how a function can be created and used in shaders. Notice that like all external functions it will be automatically included if used in any shader.
 
-    VARJO> (v-def-raw-glsl-func raw-test ((a v-int) (b v-float)) v-float
+    VARJO> (v-def-raw-glsl-func raw-test ((a v-int) (b v-float))
+               v-float
              "return a * b;")
-    T
 
     VARJO> (defshader test-shader ()
              (raw-test 1 2.4))
