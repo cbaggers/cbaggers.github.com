@@ -42,8 +42,8 @@ I thought it could be some macro that wrapped up the elements we had already cre
     ;;this was the first pseudo-code of a temporal-lambda
     (tlambda (x) (within 0 5000) (print x))
 
-The problems
-###
+
+###The problems
 
 ####Expiry
 
