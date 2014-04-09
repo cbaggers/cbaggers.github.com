@@ -11,13 +11,13 @@ This post is about time and my ongoing experiments of trying to find a way of re
 
 Why Bother?
 ===========
-It would be very valid to raise the fact that for real-time applications there are some very well-know and suitable ways of handling time (e.g. [fixed timestep](http://gafferongames.com/game-physics/fix-your-timestep/)) so why wouldn't we use these techniques?
+It would be very valid to raise the fact that for real-time applications there are some very well-know and suitable ways of handling time (e.g. [fixed timestep](http://gafferongames.com/game-physics/fix-your-timestep/) ) so why wouldn't we use these techniques?
 
 Often when coding interactively you just want to run something in the repl in pure isolation. These kind of experiments can give rise to new techniques and allow you to toy with idea more easily as you don't have to worry about any other part of your program. Lisp support this style of programming by having axiomatized some of the core concepts of the language[1] and I wanted that for time as well. I didn't want to have to take some time delta from another part of my program in order to use it in some function or concept I was developing, I want to focus purely on the task at hand.
 
 What should time look like?
 ===========================
-So after I had decided I wanted some kind of primitive for time in cepl I needed to decide what this would look like. As usual I stole from lisp. Cons cells encapsulate the most basic nature of a list: It is some 'thing' followed by some other 'thing'. So what is time? 
+So after I had decided I wanted some kind of primitive for time in cepl I needed to decide what this would look like. As usual I stole from lisp. Cons cells encapsulate the most basic nature of a list: It is some 'thing' followed by some other 'thing'. So what is time?
 
 Well first off I decided not to look at it from a physics point of view, as  this would be unnecessarily complicated, and stick to how time seems to be. Well time is continuous, it doesn't seem to 'arrive' in lumps... but computers by their nature are incremental. So if time is flowing and we treat it like a stream of water, we want to capture time in buckets and then use the captured time to drive some function. OK, that's weird but time-buffers are kind of what fixed-time-steps implement so lets have 'time-buffers' as a concept.
 
@@ -35,9 +35,9 @@ The 'AFTER' example is interesting as it includes some syntax for talking about 
 
 The weird bit...
 ================
-OK so this next part of the process was not reasoned about or based on logic. I was writing down the above and trying to work out other time predicates when I heard a voice in my head say ***'LEXICAL TIME'***. This was an odd thing to hear as I had no idea what my brain was talking about..so I stopped for a bit the more I thought about it the more I started to like the idea, we have a temporal-function so you define functionality that implicitly understood time. 
+OK so this next part of the process was not reasoned about or based on logic. I was writing down the above and trying to work out other time predicates when I heard a voice in my head say ***'LEXICAL TIME'***. This was an odd thing to hear as I had no idea what my brain was talking about..so I stopped for a bit the more I thought about it the more I started to like the idea, we have a temporal-function so you define functionality that implicitly understood time.
 
-I thought it could be some macro that wrapped up the elements we had already created and let the user write code knowing that time was being taken care of. 
+I thought it could be some macro that wrapped up the elements we had already created and let the user write code knowing that time was being taken care of.
 
     ;;this was the first pseudo-code of a temporal-lambda
     (tlambda (x) (within 0 5000) (print x))
@@ -47,7 +47,7 @@ The problems
 
 Expiry
 ------
- 
+
 The first problem I noticed was in a tlambda that uses the 'before' predicate e.g:
 
     (tlambda () ((before (from-now (seconds 10))) (print "hi")))
@@ -56,11 +56,11 @@ Notice that after 10 seconds from now this function will never run again. It ess
 
 But when we look at this again we notice that really expired isnt limited to time...it is part of a more general set of  conditional-functions. Which crudely stated as a macro could be.
 
-(defmacro defcfun (name args condition &body body)
-  `(defun ,name args
-     (if ,condition
-         (progn ,@body)
-         (signal-expired))))
+    (defmacro defcfun (name args condition &body body)
+      `(defun ,name args
+         (if ,condition
+             (progn ,@body)
+             (signal-expired))))
 
 So temporal functions are a type of conditional function. I'm not sure how useful this is...but it was interesting to me.
 
@@ -73,8 +73,8 @@ The next big issue was in composition and what the resulting code looked like. I
 
 But what we actually need is to create a closure with a stepper in the closed vars.
 
-(let ((stepper (make-stepper (seconds 2))))
-   (tlambda () (when (funcall stepper) (print "Hi")))
+    (let ((stepper (make-stepper (seconds 2))))
+       (tlambda () (when (funcall stepper) (print "Hi")))
 
 Given that tlambdas were meant to implicitly understand time this seemed ugly.
 
@@ -85,10 +85,10 @@ Time overflow
 
 Let us define an imaginary tlambda with a nice syntax:
 
-(tlambda ()
-  (then ((before (from-now (seconds 5))) (print "hi 1"))
-        ((before (from-now (seconds 5))) (print "hi 2"))
-        ((before (from-now (seconds 5))) (print "hi 3"))))
+    (tlambda ()
+      (then ((before (from-now (seconds 5))) (print "hi 1"))
+            ((before (from-now (seconds 5))) (print "hi 2"))
+            ((before (from-now (seconds 5))) (print "hi 3"))))
 
 What this is meant to do is:
 
@@ -110,11 +110,11 @@ Well the result is a very nice DSL which creates lambdas that know time and can 
 Here are a few examples:
 
     ;; when you use default lisp code, the result is a regualr lambda
-    (tlambda () (print "Hi"))  
+    (tlambda () (print "Hi"))
 
     ;; inline lambdas are fine too, again this is just a regular
     ;; lambda
-    (tlambda () 
+    (tlambda ()
       (let ((text "hello"))
         ((lambda (x) (print x)) text)))
 
@@ -128,39 +128,39 @@ Here are a few examples:
     ;; (print "jim") line always works. This also means this function
     ;; never actually expires. regular lisp forms can be seen as
     ;; eternal.
-    (tlambda () 
+    (tlambda ()
       ((before (from-now (seconds 10))) (princ "hi "))
       (print "jim"))
 
     ;; time syntax must be either at the root of the tlambda or inside
     ;; one of the special forms defined for time functions.
-    ;; the following is not valid, as the temporal condition form is 
+    ;; the following is not valid, as the temporal condition form is
     ;; within a standard lisp form
     (tlambda ()
-      (print ((before (from-now (seconds 10))) "hi"))) 
-    
+      (print ((before (from-now (seconds 10))) "hi")))
+
     ;; tlambda introduces 2 new special forms: then & repeat
-    ;; they each run each containing form until it expires and 
+    ;; they each run each containing form until it expires and
     ;; only then move to the next form. The difference is that
     ;; once all the forms have expired 'then' will signal it has
     ;; expired, whereas repeat will start from the first form again
     (tlambda () (then ((before (from-now (seconds 10))) (print "hi"))
                       ((once) (print "allo")))
-                      
+
     (tlambda () (repeat ((before (from-now (seconds 10))) (print "hi"))
                         ((once) (print "allo")))
 
     ;; progn is also modified so that it can contain the temporal
     ;; condition forms
-    (tlambda () 
+    (tlambda ()
        (progn ((before (from-now (seconds 2))) (print "hi"))))
 
 Expansion
 ---------
 Here is an example of what is generated by tlambda (I have tidied it up a little and changed gensym names for ease of reading but functionally it is the same):
-    
+
     ;; This:
-    (tlambda () 
+    (tlambda ()
       (then ((before (from-now (seconds 3))) (print "hi"))
             ((before (from-now (seconds 4))) (print "bye"))))
 
@@ -168,7 +168,7 @@ Here is an example of what is generated by tlambda (I have tidied it up a little
     (let ((counter 0)
           (deadline-1 (from-now (seconds 3)))
           (deadline-2 (from-now (seconds 4))))
-      (lambda ()    
+      (lambda ()
         (if (= counter 2)
             (signal-expired)
             (when (and (< counter 2))
@@ -198,4 +198,4 @@ Ciao
 
 
 
-[1] The simplest example of this is lists in lisp. Rather than just being given a list type, with it's implementation hidden away, we get the cons cell. The cons cell is the smallest abstraction of a linked list and with it we can build lists, tree and other graphs and then use the techniques we have for navigating cons cells (car and cdr (and friends)) to managed all of these different data structures. Also see [Paul Graham's 'The Roots of Lisp'](http://lib.store.yahoo.net/lib/paulgraham/jmc.ps). It's a short article, but it hows how with 7 basic primitives you can write an interpreter for an entire lisp language.
+*1.* The simplest example of this is lists in lisp. Rather than just being given a list type, with it's implementation hidden away, we get the cons cell. The cons cell is the smallest abstraction of a linked list and with it we can build lists, tree and other graphs and then use the techniques we have for navigating cons cells (car and cdr (and friends)) to managed all of these different data structures. Also see [Paul Graham's 'The Roots of Lisp'](http://lib.store.yahoo.net/lib/paulgraham/jmc.ps). It's a short article, but it hows how with 7 basic primitives you can write an interpreter for an entire lisp language.
