@@ -45,6 +45,8 @@ I thought it could be some macro that wrapped up the elements we had already cre
 
 ###The problems
 
+As usual ideas burst into flame on contact with reality. Here are the major points that arose.
+
 ####Expiry
 
 The first problem I noticed was in a tlambda that uses the 'before' predicate e.g:
