@@ -13,3 +13,5 @@ tags: ['lisp', 'cepl']
         ((each (seconds 1)) (print count) (setf count 0))))
 
 It's simple but it makes me happy simply because it is written in term of time.
+
+p.s. Oh yeah, as you may have guessed from this, temporal functions work now!
