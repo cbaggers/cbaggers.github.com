@@ -22,3 +22,6 @@ This gives you an active window that is decorated and accepts events which is wo
 Hopefully a solution to this will emerge soon. I then really need to go clean up the code surrounding this fix.
 
 Here's hoping
+
+[edit]
+Seems the repl in the inferior-lisp buffer (or shell) is active and usable. However the repl buffer doesnt yet. Can anyone with more experience with ccl help me out here?
