@@ -1,6 +1,6 @@
 ---
 layout: post
-title: It's Just Pretty
+title: Its Just Pretty
 description:
 date: 2013-11-25 00:21:00
 category:
