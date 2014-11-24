@@ -39,3 +39,5 @@ For example:
 This is one of those nice cases where you get to make repl exploration more fun with no cost to speed. The reason for this is no high level code will be using this inference as it would be stunningly stupid to pay that cost for no reason. All file loading (which is the most common case) will have the type name anyway so it can just be passed in as usual.
 
 Little details, but pleasant ones
+
+p.s. This is in a branch for now as I am hunting down some issues I have introduced while modifying the indexing functions
