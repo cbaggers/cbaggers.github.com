@@ -2,7 +2,7 @@
 layout: post
 title: It's Just Pretty
 description:
-date: 2013-MM-DD hh:mm:ss
+date: 2013-11-25 00:21:00
 category:
 tags: ['lisp', 'cepl']
 ---
