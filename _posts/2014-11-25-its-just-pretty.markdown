@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Its Just Pretty
+title: It's Just Pretty
 description:
 date: 2014-11-25 00:21:00
 category:
 tags: ['lisp', 'cepl']
 ---
 
-First the code:
+First some code!:
 
     > (setf c (make-c-array #(1 2 3 4)))
     #<C-ARRAY :element-type :UBYTE :dimensions (4)>
@@ -21,7 +21,7 @@ First the code:
     > (texref *)
     #<GPU-ARRAY :element-type :R8 :dimensions (4) :backed-by :TEXTURE>
 
-I have tweaked the make-*-array and make-*-texture commands so that, if you only pass in a lisp data structure, cepl will try and find a the smallest gl type that can be used across the whole data-set.
+I have tweaked the make-\*-array and make-\*-texture commands so that, if you only pass in a lisp data structure, cepl will try and find a the smallest gl type that can be used across the whole data-set.
 
 For example:
 
