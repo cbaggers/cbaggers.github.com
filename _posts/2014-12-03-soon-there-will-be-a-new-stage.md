@@ -15,15 +15,15 @@ I am not too fussed about adding Tessellation shaders urgently, mainly because I
 
 I am also musing over the idea of supporting the use of 'declare' to specify shader argument types and the context. So that the following
 
-    (defvshader test ((verts pnc) &uniform (i :int) (origin :vec3) (cam-to-world :mat4)
-                      &context :version 330)
+    (defvshader test ((verts pnc) &uniform (i :int) (origin :vec3)
+                      (cam-to-world :mat4) &context :version 330)
       ...shader code here)
 
 Would instead look like:
 
     (defvshader test (verts &uniform i origin cam-to-world)
-      (declare (pnc verts) (:int i) (:vec3 origin) (:mat4 cam-to-world)
-               (context :version 330))
+      (declare (pnc verts) (:int i) (:vec3 origin)
+               (:mat4 cam-to-world) (context :version 330))
       ...shader code here)
 
 Which is more lispy...but as types are mandatory I'm not sure how I feel about this. Does this also mean I specify 'out' variables here?
@@ -82,3 +82,5 @@ The other possibility is to be super un-common-lispy and use some special reader
 Ugh...even writing it down feels wrong. Nah, scrap this idea. I think the declare style is growing on me but I will need to give this some time. I'd appreciate any ideas on this one.
 
 Ciao
+
+p.s. But wait, one other advantage of declare form, it allows us to have default values for uniforms args. Hmm, this quite possibly means more state changes, as every unspecified uniform must take the defaut value, whereas currently uniforms are memoized. Ok so bad idea. I should probably have the concept of sane defaults though. I should move this to a new post :)
