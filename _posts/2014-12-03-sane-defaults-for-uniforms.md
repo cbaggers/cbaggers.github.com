@@ -24,7 +24,7 @@ This is easy for numbers, vectors and matrices as all have a concept of an ident
 
 Well all gl-structs ultimately have to be composed of types glsl understands, therefore we could have the defglstruct method generate an identity value we can use.
 
-What about textures? Do we create a default unit texture for each sampler type? Could do. And we don't have to worry about 'index out of bounds' as by default indexes just wrap for textures.
+What about textures? Do we create a default unit texture for each sampler type? Could do. And we don't have to worry about 'index out of bounds' as by default indexes just wrap for textures. (this is not true for texelFetch, the result is undefined, but shouldnt crash so will but enough time to provide real values)
 
 according to here: http://stackoverflow.com/questions/6354208/glgentextures-is-there-a-limit-to-the-number-of-textures
 
