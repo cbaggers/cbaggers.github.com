@@ -28,7 +28,7 @@ Would instead look like:
 
 Which is more lispy...but as types are mandatory I'm not sure how I feel about this. Does this also mean I specify 'out' variables here?
 
-** NOTE: At the start of this post I new what I was going to blog about, but now I am off on a mental wander. So sorry for the round about nature of the rest of the post :) **
+** NOTE: At the start of this post I knew what I was going to blog about, but now I am off on a mental wander. So sorry for the round about nature of the rest of the post :) **
 
 It does make the main signature clearer, especially where array types are concerned.
 
