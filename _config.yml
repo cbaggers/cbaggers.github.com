@@ -12,6 +12,7 @@ paginate: 10
 name: TechSnuffle
 description: A blog with lisp and livecoding ..Also other stuff
 url: http://techsnuffle.com
+rssfeed: http://techsnuffle.com/feed.xml
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
