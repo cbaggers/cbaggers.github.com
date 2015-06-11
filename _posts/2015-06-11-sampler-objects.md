@@ -13,21 +13,19 @@ Sampler objects allow you to override the sampling params in a texture. One samp
 
 As of last night these are now available in cepl if `(>= (version-float *gl-context*) 3.3))`. You can use them like this
 
-```
-(defvar sampler (make-sampler :wrap #(:repeat :clamp-to-edge :repeat)))
 
-(with-sampling (tex sampler)
-  (map-g #'some-pipeline some-stream :tx tex))
-```
+    (defvar sampler (make-sampler :wrap #(:repeat :clamp-to-edge :repeat)))
+
+    (with-sampling (tex sampler)
+      (map-g #'some-pipeline some-stream :tx tex))
+
 
 With sampling overrides a texture's sampling params with the sampler object for the duration of the scope. The texture then reverts to it's own sampling parameters.
 
 The functions that are used on samplers to change their parameters also work on textures so:
 
-```
-(setf (lod-bias some-texture) 0.5)
-(setf (lod-bias some-sampler) 0.5)
-```
+    (setf (lod-bias some-texture) 0.5)
+    (setf (lod-bias some-sampler) 0.5)
 
 are both valid.
 
