@@ -7,7 +7,7 @@ category:
 tags: ['lisp', 'cepl']
 ---
 
-Quickly hacked together fix fixes a fustractions where trying to write `#a(1 2 3)` gets 'corrected' to `#a (1 2 3)`
+Quickly hacked together to fix fixes a fustraction where trying to write `#a(1 2 3)` gets 'corrected' by paredit to `#a (1 2 3)`
 
     (defvar paredit-dont-add-space-after
       '((?s ?#) (?a ?#) (?λ) (?- ?#) (?+ ?#) (?c ?#) (?o ?#) (?p ?#) (?r ?#) (?s ?#) (?x ?#)))
