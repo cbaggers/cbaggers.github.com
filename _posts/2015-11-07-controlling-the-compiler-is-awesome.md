@@ -37,3 +37,5 @@ I'm thinking that a chunk to this can be implemented with the compiler the way i
 So that's why I'm excited by compilers today :D
 
 Back to work!
+
+p.s. Of course Ι am missing out a bunch of details especially that at least the names of the spaces would have to be statically defined. But ho hum, it will make sense soon :)
