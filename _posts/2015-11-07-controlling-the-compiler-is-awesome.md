@@ -15,18 +15,18 @@ Whilst on the cpu side I'm living in a (mostly) dynamically typed language, on t
 
 So one example I could try is:
 
-    (let ((pos (p! some-vec 'world-space)))
-      (transform pos 'view-space))
+    (let ((pos (p! some-vec world-space)))
+      (transform pos view-space))
 
 Where p! is a function that returns a value with type 'position-world-space'. I can then use the metadata produced by the compiler to work out what matrices (for the various spaces) need to be uploaded. I can also ensure you don't do something potentially meaningless (like adding two vectors in different spaces) without first indication that that was what you intended.
 
-    (let ((pos-1 (p! some-vec 'world-space))
-          (pos-2 (p! some-vec 'clip-space)))
+    (let ((pos-1 (p! some-vec world-space))
+          (pos-2 (p! some-vec clip-space)))
       (+ pos-1 pos-2))
 
 This is not very interesting though as it's not normally the mistake you make. Something more interesting would be when you are in a fragment shader (which is implicitly screen space) and you want to do some post-proc lighting based in clip-space. You could use a simple block like this:
 
-    (in-space 'clip-space
+    (in-space clip-space
       ..your code..)
 
 And you could be sure that any 'position' that was used inside would be transformed to the correct space prior to the calculations being carried out. Any time the spaces match it's a no-op so no conversion code is emitted.
