@@ -30,8 +30,8 @@ Let's take this code. It's useless but you can see that we make two vectors (tha
 
 Now, if I let the flow analzer do it's work and inspect the data for the `v!` calls, I get something like.
 
-	(V! 514 515)
-	(V! 514 518 519 520)
+    (V! 514 515)
+    (V! 514 518 519 520)
 
 The numbers are called `flow-id`s, they are used to track the flow of a value through a program. If two are the same then they are the same value (even if they get bound to different variables or passed through functions).
 
@@ -45,12 +45,12 @@ Now in the following example we set `x` to be a different value (it's in a progn
         (progn
           (let ((z 3))
             (setq x z)))
-			(v! x 0 0 0)))
+        (v! x 0 0 0)))
 
 The flow analysis of the `v!` calls in this program look like this
 
-	(V! 506 507)
-	(V! 509 510 511 522)
+    (V! 506 507)
+    (V! 509 510 511 522)
 
 This time the `flow-id`s of the first argument are different. This shows that, even though they both take `x`, the system knows the value has been changed.
 
