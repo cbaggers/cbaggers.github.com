@@ -7,7 +7,7 @@ category:
 tags: ['lisp', 'cepl']
 ---
 
-<img src="/assets/images/sw8.png" />
+<img src="/assets/images/s8.png" />
 
 The code one the left is the render pipeline for the image on the right. All can be editted live. I love this.
 
