@@ -12,3 +12,5 @@ tags: ['lisp', 'cepl']
 The code one the left is the render pipeline for the image on the right. All can be editted live. I love this.
 
 Also using the new `spaces` feature. More details coming soon!
+
+p.s. It's only super basic shading but that fact the features are working means that I can focus on the fun stuff!
