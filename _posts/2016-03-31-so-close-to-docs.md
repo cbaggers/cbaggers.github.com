@@ -21,7 +21,7 @@ So aye, docs are good an I was within 2 macros of finishing the documentation. S
 - local fbos (you can define fbos that belong to the pipeline)
 - all the with-fbo-bound stuff is written for you.
 
-After a lot of mummbling to myself I found that, with the exception of 'automatic uniform arguments', all of these advantages could be has without needing `defpipeline` to support composing other pipelines.
+After a lot of mumbling to myself I found that, with the exception of 'automatic uniform arguments', all of these advantages could be has without needing `defpipeline` to support composing other pipelines.
 
 Local FBOs was basically a closure, but the problem was that the gl context wouldnt be available when the closure vars were initialized. To fix this I will make *all* CEPL gpu types be created in an uninitialized state, capturing their arguments in a callback that will be run as soon as the context is available. As a side effect this should mean that gpu-types can now be used from defvar defparameter etc with no issues, which will be lovely.
 
