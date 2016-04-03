@@ -13,3 +13,4 @@ hehe turns out in my refactoring hubris I had forgotten how my samplers worked. 
       (map-g #'prog-1 *stream* :tex *tex*))
 
 Which is more reasonable :) I still want to change it though
+{{ page.theme.name }}
