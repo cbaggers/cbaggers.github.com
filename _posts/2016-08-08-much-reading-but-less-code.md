@@ -8,8 +8,6 @@ tags: ['lisp', 'cepl']
 commentIssueId:
 ---
 
-# A Steaming Pile of Study
-
 > TLDR: If you add powerful features to your language you must be sure to balance them with equally powerful introspection
 
 I haven't got much done this week, I have some folks coming from the uk soon so cleaning up and getting ready for that. I have decided to take on more projects though :D
