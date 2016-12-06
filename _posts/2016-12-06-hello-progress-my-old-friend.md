@@ -46,7 +46,7 @@ Nice! this means the specific function is now associated with this type and will
 
 Later our compiler will get to that `funcall` expression. It will look at the type of `our-sin` and see the `ctv` associated with it. It will then transform `(funcall our-sin 10)` to `(sin 10)` and compile that instead.
 
-## Functions that take compile time values as arguments
+### Functions that take compile time values as arguments
 
 We do a very simple hack when it comes to this. If we have something like this:
 
@@ -77,7 +77,7 @@ The `some-func` var is in scope for the local function `some-func-caller` so the
 Things get more complicated with closures and I havent finished that. I can now pass closures to functions but I cannot return them from functions yet. I know how I could do it but it feels hacky and so I'm waiting for more inspiration before I try that part again.
 
 
-## Primed for types
+### Primed for types
 
 With all this compiler work my brain was obviously in the right place to start things about static typing in general. Being able to define your own type-system for lisp is something I have wanted for ages, but as support for this isn't built into the spec I've been trying to work out what the 'best approach™' is.
 
@@ -99,7 +99,7 @@ A while back I ported an implementation of the [Hidley (Damas) Milner checking a
 
 Wish me luck!
 
-## Next?
+### Next?
 
 I'm not sure, my next year is going to contain a lot of study so I hope I can keep on top of these projects as well. The last few weeks have certainly reminded me to trust my instincts on what I should be working on, and it's good to feel 'out of the woods' on that issue.
 
