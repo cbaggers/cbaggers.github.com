@@ -12,7 +12,7 @@ I seem to oscillate slowly between needing to create and needed to consume media
 
 Either way I've not been super productive, let's start with the consumption:
 
-## Nom nom knowledge
+### Nom nom knowledge
 
 - Listened to [Iceberg Slim's biography](https://www.youtube.com/playlist?list=PLSRtWqmC79Ka5YqNJeHP6gbzLTVtWrqh_) - On stage one time Dave Chappele was talking about how the media industry worked and likened it to pimping. He said this book pretty much explained the system. It's damn depressing.
 
@@ -29,7 +29,7 @@ Either way I've not been super productive, let's start with the consumption:
 
 - I've also been listening to a book called ['The Information: A History, a Theory, a Flood'](https://en.wikipedia.org/wiki/The_Information:_A_History,_a_Theory,_a_Flood) again. It's an outstanding walk through our history of understand what information is. From african drums, to morse code, to computers, to genes. This book rules. Read/Listen to it. I've been repeating 2 chapters this last week trying to bake them into my brain. The first was on entropy (and how information & entropy are the same), and the second is on genes and how information flows from and through us.
 
-## Making stuffs
+### Making stuffs
 
 The first order of business was to look at PBR. Previously I had got deferred point lights to work, however I failed hard at the IBL step. Luckily I rediscovered [this tutorial](http://www.codinglabs.net/article_physically_based_rendering.aspx) as understood how it fit into what I was doing. Last time I had tried to stick to one paper as (in my ignorance) each approach felt very different to me.
 
