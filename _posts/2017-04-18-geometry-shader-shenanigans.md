@@ -102,7 +102,7 @@ becomes something like:
 
 ```
 ..
-in FROM_VERTEX
+in IN_BLOCK
 {
    vec2 uv;
 } gs_in[3]
@@ -115,7 +115,7 @@ void main()
 }
 ```
 
-Notice that `int index = 1` ended up in the GLSL but there is no `a = <something>`, that is because of that ephemeral type. The reason that it has to be ephemeral is that until we use `aref` we can't access the `uv` slot inside the block. Also you cant write `FROM_VERTEX tmp = gs_in[1]` or `FROM_VERTEX[3] tmp = gs_in`, interface blocks look like structs, but they aren't structs and those two example as simply illegal in GLSL, which is a damn shame otherwise this would be much easier!
+Notice that `int index = 1` ended up in the GLSL but there is no `a = <something>`, that is because of that ephemeral type. The reason that it has to be ephemeral is that until we use `aref` we can't access the `uv` slot inside the block. Also you cant write `IN_BLOCK tmp = gs_in[1]` or `IN_BLOCK[3] tmp = gs_in`, interface blocks look like structs, but they aren't structs and those two example as simply illegal in GLSL, which is a damn shame otherwise this would be much easier!
 
 Instead of this array business we could invent a 'primitive' type. So the geom shader could be:
 
