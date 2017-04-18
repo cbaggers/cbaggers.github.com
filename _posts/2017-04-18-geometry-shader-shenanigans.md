@@ -42,7 +42,7 @@ But how about if the `out` was an array?
 out vec4[10] foo; // in the vertex shader
 ```
 ```
-in vec4[2][10] foo; // in the fragment shader
+in vec4[2][10] foo; // in the geometry shader
 ```
 
 Simple right? I thought so and I updated my compiler to work with this. I kept having this nagging feeling though, something about interface blocks. Turns out I should have listened to the feeling sooner. Support for arrays of arrays only arrive in GLSL in v4.3..shit. Before that you needed to use and interface block:
