@@ -28,7 +28,7 @@ Nice and simple. It also works for arrays of values.
 Next we add a geometry (or tessellation) shader. Now we are working with primtives (or patches) so the `out`s from the last stage become an array of `in`s in the geometry stage.
 
 ```
-out vec4[2] foo; // in the vertex shader
+out vec4 foo; // in the vertex shader
 ```
 ```
 in vec4[2] foo; // in the fragment shader
