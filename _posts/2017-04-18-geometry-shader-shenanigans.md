@@ -45,7 +45,7 @@ out vec4[10] foo; // in the vertex shader
 in vec4[2][10] foo; // in the geometry shader
 ```
 
-Simple right? I thought so and I updated my compiler to work with this. I kept having this nagging feeling though, something about interface blocks. Turns out I should have listened to the feeling sooner. Support for arrays of arrays only arrive in GLSL in v4.3..shit. Before that you needed to use and interface block:
+Simple right? I thought so and I updated my compiler to work with this. I kept having this nagging feeling though, something about interface blocks. Turns out I should have listened to the feeling sooner. Support for arrays of arrays only arrive in GLSL in v4.3 and before that you needed to use an interface block:
 
 ```
 out VertexOuts
@@ -84,7 +84,7 @@ So far, so simple. Next let's look at a geometry shader that would match that ve
   ...)
 ```
 
-Makes sense right? We just array the inputs. However we know that our interface block is going to cause problems. In this case `uv` isn't really `vec2[3]` it's `in blockName { vec2 }gs_in[3]`. We have a mismatch between the abstraction and reality. However it's a useful lie, it takes the GLSL behavior and makes it easy to understand, so can we keep it.
+Makes sense right? We just array the inputs. However we know that our interface block is going to cause problems. In this case `uv` isn't really `vec2[3]` it's `in blockName { vec2 }gs_in[3]`. We have a mismatch between the abstraction and reality. However it's a useful lie, it takes the GLSL behavior and makes things more consistent and thus easy to understand, so if we can keep it I'd prefer to.
 
 The answer (at least for now) is to make an 'ephemeral' type, this is a type that can't exists in GLSL for real, but one that our compiler can handle.
 
