@@ -127,7 +127,7 @@ One other option we could have gone for instead of this ephemeral array business
 	..))
 ```
 
-But then `test-geom` is no longer a stand alone function, we would need to wait until `test-geom` was used in a pipeline to know what slots `triangle` contained. One of the beauties of CEPL is that all gpu functions are simply functions until they are used in a pipeline, they can be used as stages or just be called from other gpu functions. If we use `triangle` then we can't compile this gpu function ahead of time, which would such as that feature currently lets you find and fix bugs sooner. On top of this `triangle` would also have to be ephemeral as the type doesn't exist in GLSL
+But then `test-geom` is no longer a stand alone function, we would need to wait until `test-geom` was used in a pipeline to know what slots `triangle` contained. One of the beauties of CEPL is that all gpu functions are simply functions until they are used in a pipeline, they can be used as stages or just be called from other gpu functions. If we use `triangle` then we can't compile this gpu function ahead of time, which would suck as that feature currently lets you find and fix bugs faster. On top of this `triangle` would also have to be ephemeral as there is no `triangle` type in GLSL
 
 The same also goes for requiring the user to define the interface between vertex & geom shaders as structs. You still need the ephemeral & you require the user to repeat themselves.
 
