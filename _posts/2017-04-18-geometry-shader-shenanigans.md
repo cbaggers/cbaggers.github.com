@@ -143,7 +143,7 @@ Oh, I almost forgot..
 
 ### Primitives!
 
-Yes, as we are in the world of Geometry & Tessellation we need to talk about primitives. One of the things I love about Varjo is that it can pass information from stage to stage so the user doesn't have to write the same stuff multiple times, we should be able to do the same with primitives. I wanted to be able to take the OpenGL draw-mode and pass it through the compilation. This allows Varjo to not only write some of the GLSL automatically (e.g. `layout(triangles) in;` in the Geometry stage) but also to know the length of the array'd interface block going into the geometry stage. Having little details like this checked is worth my time as then Varjo can give much nicer and more targeted errors that GL can.
+As we are in the world of Geometry & Tessellation we need to talk about primitives. One of the things I love about Varjo is that it can pass information from stage to stage so the user doesn't have to write the same stuff multiple times, we should be able to do the same with primitives. I wanted to be able to take the OpenGL draw-mode and pass it through the compilation. This allows Varjo to not only write some of the GLSL automatically (e.g. `layout(triangles) in;` in the Geometry stage) but also to know the length of the array'd interface block going into the geometry stage. Having little details like this checked is worth my time as then Varjo can give much nicer and more targeted errors that GL can.
 
 I'll skip the details on this for now as this post is already getting long.
 
