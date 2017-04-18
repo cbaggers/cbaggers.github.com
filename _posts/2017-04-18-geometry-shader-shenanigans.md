@@ -31,7 +31,7 @@ Next we add a geometry (or tessellation) shader. Now we are working with primtiv
 out vec4 foo; // in the vertex shader
 ```
 ```
-in vec4[2] foo; // in the fragment shader
+in vec4[2] foo; // in the geometry shader
 ```
 
 The length of the array is dictate by the size of the primitive, so `lines` are length 2, `triangles` are length 3, etc.
