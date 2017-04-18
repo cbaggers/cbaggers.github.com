@@ -115,9 +115,9 @@ void main()
 }
 ```
 
-Notice that `int index = 1` ended up in the GLSL but there is no `a = <something>`, that is because of that ephemeral type. The reason that it has to be ephemeral is that until we use `aref` we can't access the `uv` slot inside the block. Also you cant write `IN_BLOCK tmp = gs_in[1]` or `IN_BLOCK[3] tmp = gs_in`, interface blocks look like structs, but they aren't structs and those two example as simply illegal in GLSL, which is a damn shame otherwise this would be much easier!
+Notice that `int index = 1` ended up in the GLSL but there is no `a = <something>`, that is because of that ephemeral type. The reason that it has to be ephemeral is that until we use `aref` we can't access the `uv` slot inside the block. Also you cant write `IN_BLOCK tmp = gs_in[1]` or `IN_BLOCK[3] tmp = gs_in` as whilst interface blocks may look like structs, but they dont' behave like them and those two example as simply illegal in GLSL. It's a damn shame really as otherwise this would be much easier!
 
-Instead of this array business we could invent a 'primitive' type. So the geom shader could be:
+One other option we could have gone for instead of this ephemeral array business we could invent a 'primitive' type. So the geom shader could be:
 
 ```
 (defun-g test-geom ((uv triangle))
