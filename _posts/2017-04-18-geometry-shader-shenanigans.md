@@ -8,7 +8,9 @@ tags: ['lisp', 'cepl']
 commentIssueId:
 ---
 
-When I gave that talk a few weeks back I said, rather naively in hindsight, that geometry & tessellation shaders should work.. man was I wrong there. It turned out to be rather fiddly to find a balance that felt lispy, worked with my current analogies and worked across all GLSL version (or at least failed gracefully), but lets start at the beginning.
+When I gave that talk a few weeks back I said, rather naively in hindsight, that geometry & tessellation shaders should work.. man was I wrong there. It turned out to be rather fiddly to find a balance that felt lispy, worked with my current analogies and worked across all GLSL version (or at least failed gracefully).
+
+Lets start at the beginning.
 
 ### Passing values between GLSL stages
 
@@ -26,7 +28,7 @@ Nice and simple. It also works for arrays of values.
 Next we add a geometry (or tessellation) shader. Now we are working with primtives (or patches) so the `out`s from the last stage become an array of `in`s in the geometry stage.
 
 ```
-out vec4 foo; // in the vertex shader
+out vec4[2] foo; // in the vertex shader
 ```
 ```
 in vec4[2] foo; // in the fragment shader
