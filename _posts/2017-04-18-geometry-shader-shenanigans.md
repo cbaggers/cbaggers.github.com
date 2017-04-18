@@ -131,13 +131,13 @@ But then `test-geom` is no longer a stand alone function, we would need to wait 
 
 The same also goes for requiring the user to define the interface between vertex & geom shaders as structs. You still need the ephemeral & you require the user to repeat themselves.
 
-This is one of those cases where every option is kinda sucky but there is a less sucky option, and that is the first one described and is what I ended up going for.
+This is one of those cases where every option is kinda sucky but the first one described feels the least sucky, and that is the one I have gone for.
 
 ### Implement it
 
 The above took a few days of experiments and pain to get ironed out, and then it needed to be implemented. As usual working in areas of the compiler that haven't been touched for a while uncovered bugs and general weaknesses that needed fixes.
 
-Another thing that was playing a lot on my mind was that one feature in CEPL that Varjo has support for is defining a stage as raw GLSL and using it in a pipeline, so whatever I made needed to not break that. Having users is awesome and I really want to make sure I don't fuck up their workflow if I can help it. For example one person is already using the GLSL stage support in CEPL to use Tessellation shaders, which is something I've never used! The fact that they can do this makes me happy and eases the pain whilst I slowly find nice lispy ways of doing the same.
+Another thing that was playing a lot on my mind was that one of the features CEPL has is support for is defining a stage as raw GLSL and using it in a pipeline, so whatever I made needed to not break that. Having users is awesome and I really want to make sure I don't fuck up their workflow if I can help it. For example one person is already using the GLSL stage support in CEPL to use Tessellation shaders, which is something I've never used! The fact that they can do this makes me happy and eases the pain whilst I slowly find nice lispy ways of doing the same.
 
 Oh, I almost forgot..
 
