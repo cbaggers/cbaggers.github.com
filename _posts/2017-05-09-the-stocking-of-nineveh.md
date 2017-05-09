@@ -133,7 +133,10 @@ float PERLIN_NOISE(vec2 P)
     vec4 PF_PFMIN1 = (P.xyxy - vec4(PI,(PI + vec2(1.0f))));
     vec4 MVB_0;
     vec4 MVB_1;
-    MVB_0 = SGIM_QPP_HASH_2_PER_CORNER(PI,MVB_1); // <<<<<<<<<<<<<<<<<<<
+	//
+	// Here is that hashing function in the GLSL
+	//         ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    MVB_0 = SGIM_QPP_HASH_2_PER_CORNER(PI,MVB_1);
     vec4 GRAD_X = (MVB_0 - vec4(0.49999));
     vec4 GRAD_Y = (MVB_1 - vec4(0.49999));
     vec4 GRAD_RESULTS = (inversesqrt(((GRAD_X * GRAD_X) + (GRAD_Y * GRAD_Y))) * ((GRAD_X * PF_PFMIN1.xzxz) + (GRAD_Y * PF_PFMIN1.yyww)));
