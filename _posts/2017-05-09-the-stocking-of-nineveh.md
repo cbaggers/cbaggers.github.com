@@ -64,9 +64,12 @@ One thing that felt great was noticing that, in the  naive GLSL -> Lisp translat
 ```
 (defun-g ctoy-quad-frag ((uv :vec2)
                          &uniform (now :float)
-                         (mouse :vec2) (mouse-norm :vec2) (mouse-buttons :vec2)
+                         (mouse :vec2)
+                         (mouse-norm :vec2)
+                         (mouse-buttons :vec2)
                          (screen-res :vec2))
-  (v3! (+ 0.4 (* (perlin-noise #'sgim-qpp-hash-2-per-corner  ;; <<<<<<<<
+  ;; here is the hash function we pass in ↓↓↓↓↓↓
+  (v3! (+ 0.4 (* (perlin-noise #'sgim-qpp-hash-2-per-corner
                                (* uv 5))
                  0.5))))
 ```
