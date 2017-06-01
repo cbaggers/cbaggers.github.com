@@ -16,12 +16,12 @@ I changed varjo's `if` form so that if certain conditions are right it will emit
 
 ```
 (glsl-code
-		  (translate
-		   (make-stage :vertex '((a :int)) nil '(:450)
-					   '((let ((x (if (< a 10)
-									   a
-									   (- a))))
-						   (v! 1 2 3 4))))))
+  (translate
+   (make-stage :vertex '((a :int)) nil '(:450)
+			   '((let ((x (if (< a 10)
+							   a
+							   (- a))))
+				   (v! 1 2 3 4))))))
 "// vertex-stage
 #version 450
 
