@@ -91,7 +91,7 @@ What is nice with this is that you can then define attack combos as little state
 
 The logical-control is still very much a WIP but I'm happy with the direction it is going.
 
-That's all for input for now, I have been doing other stuff this week like making a tablet app which lets you use sliders and pads to send data to lisp and of more streaming[2] but it's time for me to go do other stuff.
+That's all for input for now, I have been doing other stuff this week like making a tablet app which lets you use sliders and pads to send data to lisp [2] and of course more streaming[3] but it's time for me to go do other stuff.
 
 This weekend I am going to have a go at making a little RPG engine with all this stuff. Should be fun!
 
