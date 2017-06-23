@@ -1,6 +1,6 @@
-layout: post
 ---
-everytitle: input given
+layout: post
+title: input given
 description:
 date: 2017-06-23 09:36:19
 category:
