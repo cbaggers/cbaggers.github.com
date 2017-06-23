@@ -97,6 +97,8 @@ This weekend I am going to have a go at making a little RPG engine with all this
 
 [0] you could of course cache event objects, but then you need *n* of each type of event object (because we may dispatch on type) and we can't make them truly immutable.
 [1] I made a concession that you can have callbacks as they are used internally and it hopefully means people won't try and hack their own in on top of the system.
-[2] <iframe width="560" height="315" src="https://www.youtube.com/embed/CdDVjRVOifM" frameborder="0" />
+[2]
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CdDVjRVOifM" frameborder="0" />
 
 ![tablet app](https://everyweeks.com/xI8fR7QIcw4ACYyRWfnwcF1anUF436rN-tapp.jpg)
