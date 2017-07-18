@@ -42,6 +42,6 @@ Because this is a pita I've decided to make the simplest solution I can think of
 
 ### The effect on my life
 
-It's odd to be in this place, 5 years of on/off work on CEPL and this thing is starting to look somewhat complete. There is still a bunch of bugfixes and newer GL features to add but the original vision is pretty much there. This seems to have freed up the mind to start turning inwards again and I've been in a bit of a slump for the last week. These slumps are something I have become a bit more aware of over the last year and so have become a little better at dealing with.. Still, as this is about struggle an the rest of this post is listing progress it seemed right to mention this.
+It's odd to be in this place, 5 years of on/off work on CEPL and this thing is starting to look somewhat complete. There is still a bunch of bugfixes and newer GL features to add but the original vision is pretty much there. This seems to have freed up the mind to start turning inwards again and I've been in a bit of a slump for the last week. These slumps are something I have become a bit more aware of over the last year and so have become a little better at noticing.. Still, as this is about struggles as well as successes and as the rest of this post is listing progress it seemed right to mention this.
 
 Peace folks
