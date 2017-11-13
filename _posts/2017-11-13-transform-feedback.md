@@ -70,7 +70,7 @@ CEPL is pretty good at catching and explaining cases where GL will throw an erro
 
 During this I ran into some aggravating issues relating to transform feedback and recompilation of pipelines, it was annoying to the point that I rewrote a lot of the code behind the `defpipeline-g` macro. The short version of this is that the code emitted is no longer a top-level closure and also that CEPL now has ways of avoiding recompilation when it can be proved that the gpu-functions in use havent changed.
 
-I also found out that in some cases `defvar` with type declarations is faster than the captured values from a top level closure, even when they are typed. See [here](https://github.com/cbaggers/cepl/blob/master/core/protocode/var-speed-test.lisp) for a test you can run on your machine to see if you get the same kind of results.
+I also found out that in some cases `defvar` with type declarations is faster than the captured values from a top level closure, even when they are typed. See [here](https://github.com/cbaggers/cepl/blob/master/core/protocode/var-speed-test.lisp) for a test you can run on your machine to see if you get the same kind of results.[1]
 
 ### Shipping it
 
@@ -83,3 +83,4 @@ Next on the list for this month is shared contexts. More on that next week!
 Ciao
 
 [0] late november or early december
+[1] testing on my mac has given different results, use `defvar` and packing data in a struct is faster than multiple `defvar`s but slower than the top level closure. Luckily it's still on the order of microseconds a frame (assuming 5000 calls per frame) but measurable. It's interesting to see as packed in `defvar` was faster on my linux desktop `¯\_(ツ)_/¯` I'll show more data when I have it.
