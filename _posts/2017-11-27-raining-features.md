@@ -148,9 +148,10 @@ Yeah. So all of that was awesome, I'm really glad to have a feature land that I 
 
 ```
 TEST> (pull-g *data*)
-(((0 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 6 0 0 0 7 0 0 0 8 0 0 0 9 0
-   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)))
+(((0 0 0 0 1 0 0 0 2 0 0 0 3 0 0 0 4 0 0 0 5 0 0 0 6
+   0 0 0 7 0 0 0 8 0 0 0 9 0 0 0 0 0 0 0 0 0 0 0 0 0
+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)))
 ```
 
 The reason for this that I didnt understand layout in GL properly. This also means CEPL doesnt handle it properly and that I have a bug :) (this bug)[https://github.com/cbaggers/cepl/issues/193].
