@@ -18,7 +18,7 @@ Ok so SSBOs turned out to be a much smaller feature than expected as well. So I 
 
 Here are the results:
 
-## Sync Objects
+### Sync Objects
 
 GL only has one of these, the fence. CEPL now has support for this too.
 
@@ -52,7 +52,7 @@ Or you can simply check if the fence has signalled
 (gpu-fence-signalled-p some-fence)
 ```
 
-## Query Objects
+### Query Objects
 
 GL has a range of queries you can use, we have exposed them as structs you can create as follows:
 
@@ -87,7 +87,7 @@ We can also say not to wait and CEPL will try to pull the results immediately, i
 (pull-gpu-query-result some-query nil) ;; the nil here means don't wait
 ```
 
-## Compute
+### Compute
 
 To use compute you simply make a gpu function which takes no non-uniform arguments and always returns `(values)` (a void function in C nomenclature) and then make a gpu pipeline that only uses that function.
 
@@ -117,7 +117,7 @@ You can the `map-g` over this like any other pipeline..
 
 We also soften the requirements around gpu-function names for the compute stage. Usually you have to specify the full name of a gpu function due to possible overloading e.g. `(saturate :vec3)` however as compute shaders can only take uniforms, and we don't offer overloading based on uniforms, there can only be one with a given name. Because of this we allow `yay-compute` instead of `(yay-compute)`.
 
-## SSBOs
+### SSBOs
 
 The eagle eyed of you will have noticed the `:ssbo` qualifier in the `woop` uniform argument. SSBOs give you storage you can write into from a compute shader. Their api is almost identical to that of UBOs so I copied-pasted that code in CEPL and got SSBOs working. This code will most likely be unified again once I have fixed some details with binding however for now we have something that works.
 
@@ -142,7 +142,7 @@ and then make an SSBO from that
 
 And that's it, ready to pass to our compute shader.
 
-## .Phew.
+### .Phew.
 
 Yeah. So all of that was awesome, I'm really glad to have a feature land that I wasnt expecting to add for a couple more years. Of course there are bugs, the most immediately obvious is that when I tried the example above I was getting odd gaps in the data in my SSBO
 
@@ -176,7 +176,7 @@ This stuff needs to be done so it's better we rip the band-aid off whilst we hav
 
 News on that as it progresses.
 
-## Yay
+### Yay
 
 All in all though, a great 24 hours. I'm currently learning how to extract std140 layout info from varjo types so that will likely be what I work on next Saturday.
 
