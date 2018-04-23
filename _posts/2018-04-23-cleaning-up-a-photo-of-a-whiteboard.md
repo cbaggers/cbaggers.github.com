@@ -36,4 +36,4 @@ Finally open up brightness & contrast and drop the brightness a tiny bit.
 
 That's it. Much nicer to stare at and maintains all the features.
 
-![assets/images/wboard.png]
+![dif](assets/images/wboard.png)
