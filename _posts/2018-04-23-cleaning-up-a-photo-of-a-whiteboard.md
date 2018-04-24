@@ -22,6 +22,9 @@ Set the new layer's mode to "Divide".
 Apply a Gaussian blur with a radius of about 50 (Filters/Blur/Gaussian Blur...)
 ```
 
+> Note: Alternatively just perform a 'difference of gaussians' on the image setting the first to radius 70 and the second to radius 1
+
+
 I used a Gaussian blue with radius 70 in both directions. `Mode` is a dropdown near the top of the layers panel.
 
 Next pick a background color and paint over the world offending background features; stuff like magnets and erasers.
