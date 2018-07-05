@@ -15,7 +15,7 @@ I'm probably out of date! I just saw you can install emacs via pacman in msys wh
 
 
 ### Install
-- download this chap http://ftp.gnu.org/gnu/emacs/windows/emacs-26/emacs-26.1-x86_64.zip
+- download this chap <http://ftp.gnu.org/gnu/emacs/windows/emacs-26/emacs-26.1-x86_64.zip>
 - There is no install process so just extract it to c:\ so you have a folder like c:\emacs-25-1
 - open the c:\emacs-**-*\bin folder
 - copy the path to that directory
@@ -28,7 +28,7 @@ I'm probably out of date! I just saw you can install emacs via pacman in msys wh
 
 Dont download packages yourself, keeping them current is a pain, emacs comes with a package manager but the official package source is a little behind the times so we will add one that is much more used by the community 'melpa'
 
-See this video for how to use and install it: https://www.youtube.com/watch?v=Cf6tRBPbWKs
+See this video for how to use and install it: <https://www.youtube.com/watch?v=Cf6tRBPbWKs>
 
 Short version is:
 - hit 'M-x' [0] which will open the minibuffer at the bottom of emacs, type 'customize' and hit return.
@@ -142,4 +142,4 @@ Remember that emacs as your editor, nothing is too stupid if it makes your exper
 
 Thats all for now, seeya!
 
-[0] (M stands for meta and is the alt key [the naming comes from the old lisp machine keyboards iirc https://pbs.twimg.com/media/C942BKSU0AE7p0q.jpg])
+[0] (M stands for meta and is the alt key [the naming comes from the old [lisp machine keyboards iirc](https://pbs.twimg.com/media/C942BKSU0AE7p0q.jpg))
