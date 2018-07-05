@@ -60,6 +60,7 @@ It looks like a lot just its just shit I've slowly accrued whilst using emacs.
 ;; when you start looking for files its nice to start in home
 (setq default-directory "~/")
 
+;; Using msys?
 ;; to make sure we can use git and stuff like that from emacs
 (setenv "PATH"
   (concat
@@ -115,9 +116,11 @@ It looks like a lot just its just shit I've slowly accrued whilst using emacs.
 (global-set-key (kbd "C-c )") `goto-match-paren)
 ```
 
-### ssh-agent (optional)
+### ssh-agent hack (only needed if you have the issue I did)
 
-Windows is a pita with some of this stuff. I made a shortcut which loads emacs via msys and initializes the ssh-agent at the same time. That way I'm always ready to get to work.
+Windows is a pita with some of this stuff. I have emacs on machine using the bash provided with git rather than a dedicate msys or whatever install and I got confused some ssh-agent issues. So I just made a windows shortcut that runs emacs from git bash and that helped. I get propted for my ssh-agent password on launch (which I do once a day) and then im free to work.
+
+The shortcut just pointed to: `"C:\Program Files\Git\git-bash.exe" -c "emacs-25.2"`
 
 ### Control Key (optional)
 
@@ -138,7 +141,7 @@ Save it, run it and restart windows for it to take effect.
 
 Save and restart emacs again. Hopefully there are no errors (bug me if there are)
 
-Remember that emacs as your editor, nothing is too stupid if it makes your experience better. For example I kept mistyping certain key combos so I bound the things I kept hitting instead to the save functions, it's small but it makes me faster.
+Remember that emacs is your editor, nothing is too stupid if it makes your experience better. For example I kept mistyping certain key combos so I bound the things I kept hitting instead to the same functions, it's small but it makes me faster.
 
 Thats all for now, seeya!
 
