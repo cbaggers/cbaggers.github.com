@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TileSpire Dev Daily 1
+title: TaleSpire Dev Daily 1
 description:
 date: 2018-10-02 17:02:29
 category:
