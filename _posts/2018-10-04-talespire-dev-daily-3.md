@@ -15,7 +15,7 @@ With that somewhat out of the way I had a go at implementing the scheme. I alrea
 
 One example issue (which I mentioned yesterday) can be summarized like this:
 
-> There are two GMs, `A` & `B` and each have their own undo/redo history[0]
+> There are two GMs, `A` & `B` and each have their own undo/redo history
 >
 > - GM `A` places a floor-tile
 > - GM `A` places a crate
