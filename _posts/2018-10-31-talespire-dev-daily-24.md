@@ -7,7 +7,7 @@ category:
 tags: ['Bouncyrock', 'TaleSpire']
 ---
 
-Hey folks, we are pushing this boulder up hill is slow going but it's getting there.
+Hey folks, pushing this boulder up hill is slow going but it's getting there.
 
 Today I continued work on the 'joining campaigns and boards' code. Mainly I was looking at how we can used locally cached versions of the boards to make sure that when you log in you see stuff immediately. We of course ping the server to get the latest info on things like the campaigns you are a member of, but those requests can take a few seconds and the most common case is starting a new campaign or continuing and existing campaign.
 
