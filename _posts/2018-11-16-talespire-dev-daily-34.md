@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TaleSpire Dev Daily 33
+title: TaleSpire Dev Daily 34
 description:
 date: 2018-11-16 00:27:02
 category:
