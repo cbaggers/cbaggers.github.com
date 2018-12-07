@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Reasons why lisp games suffer' corrections
+title: Response to 'Reasons why lisp games suffer'
 description:
 date: 2018-12-07 08:22:54
 category:
