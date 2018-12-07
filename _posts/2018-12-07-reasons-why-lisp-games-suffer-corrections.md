@@ -7,7 +7,7 @@ category:
 tags: ['lisp', 'cepl']
 ---
 
-I haven't been on `r/lisp` for a week or so due to being rather low on free time as we try and get an [alpha of our game](http://talespire.com) out of the door. When I did pop back I saw ['5 Reasons why Lisp Games Suffer and proposed solution'](https://terminal625.blogspot.com/2018/12/5-reasons-why-lisp-games-suffer-and.html) which I thought would be interesting, but what I found was bizzare and missinforming.
+I haven't been on `r/lisp` for a week or so due to being rather low on free time as we try and get an [alpha of our game](http://talespire.com) out of the door. When I did pop back I saw ['5 Reasons why Lisp Games Suffer and proposed solution'](https://terminal625.blogspot.com/2018/12/5-reasons-why-lisp-games-suffer-and.html) which I thought would be interesting, but what I found was bizarre and misinforming.
 
 This article is, in my opinion, wrong from end to end so I'd like to go through it a bit. I realize this may come across as shitting on the authors intent which isn't my goal however being named explicitly in the article I feel like I can respond in some fashion. Also it'll sound like I'm shitting on lisp, which I don't feel I am. I adore working in this language but it is also just a piece of technology, just a tool, and we should be realistic about our tools when it comes to a given context.
 
