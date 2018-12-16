@@ -16,3 +16,5 @@ I'm close with the steam signin but there is something I'm missing as I'm gettin
 C'est la vie.
 
 Back to work.
+
+`[EDIT 23:07]:` It works! well, it crashes past the point where Steam has accepted the token, so yay. Login will be done real damn soon :)
