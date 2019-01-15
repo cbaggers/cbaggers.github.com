@@ -17,7 +17,7 @@ The next were ['Line of sight is behaving oddly'](https://github.com/Bouncyrock/
 
 Previous, in order to see if one creature could see another we just had a simple sphere cast between the two.
 
-![0](assets/images/los0.png)
+![0](/assets/images/los0.png)
 
 Issues included not taking creature eye position into account and that if the ray clipped some scenery, as in the case above, the creature would disappear even though most of it was in view.
 
@@ -25,7 +25,7 @@ To mitigate this I'm now taking multiple raycasts between an approximation of th
 
 We also cast 1 ray from the source creature's head to close to the base of the target creature. This lets us catch cases where a creature can part of another creature on a lower floor.
 
-![1](assets/images/los1.png)
+![1](/assets/images/los1.png)
 
 As mentioned before, these are really tweaks to patch over issues with the current approach. One thing we've mused over is capturing a low res version of the scene into a cubemap (as in some lightprobe techniques) but naturally instead of rendering the colors of the scene we render IDs of creatures into the result. we can then see exactly what the creature would be able to see (more or less) and could accumulate the IDs into an SSBO (or similar buffer) to be used the following frame for showing/hiding the creatures in view.
 
