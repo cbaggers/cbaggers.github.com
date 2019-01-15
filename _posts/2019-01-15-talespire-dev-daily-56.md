@@ -48,4 +48,6 @@ Until then,
 
 Peace.
 
+p.s. After going to be I quickly realized it's easy to do the line of sight stuff just using fragment shaders. Trade off is fixed max number of creatures (e.g. 256) but that seems ttoally fine given the current numbers of creatures we are dealing with.
+
 [0] non-trivial as I haven't done much compute work and none in Unity so far.
