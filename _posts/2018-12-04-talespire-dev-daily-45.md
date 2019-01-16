@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 45
 description:
 date: 2018-12-03 23:47:07
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Ah today has been fun again. A few things that were done were:

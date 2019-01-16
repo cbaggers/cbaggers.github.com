@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 22
 description:
 date: 2018-10-30 00:12:53
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Heya folks, last time was a [video](https://www.youtube.com/watch?v=n0-aj_sTWQ0) where we looked at some development surrounding the fog of war implementation. I've been hammering away on bugs, both the ones that showed up on the stream and plenty of others.

@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 49
 description:
 date: 2018-12-10 23:52:19
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Hey again, back after a few days without dailies.

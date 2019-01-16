@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 24
 description:
 date: 2018-10-31 17:24:21
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Hey folks, pushing this boulder up hill is slow going but it's getting there.

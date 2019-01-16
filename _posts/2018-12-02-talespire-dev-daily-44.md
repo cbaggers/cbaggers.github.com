@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 44
 description:
 date: 2018-12-02 01:18:54
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Hey again! today has been spent taking places where we would make multiple calls to the backend and merging them into single calls. Makes stuff a bit faster, simpler and more robust.

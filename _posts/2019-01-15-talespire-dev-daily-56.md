@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 56
 description:
 date: 2019-01-15 00:59:34
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Hey again folks, these dailies had to be put to the side during the crunch to get the alpha out of the door, but now a few days have passed I'm ready to get them started again.

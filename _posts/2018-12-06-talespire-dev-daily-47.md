@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 47
 description:
 date: 2018-12-06 00:03:13
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Some serious yak shaving has been taking place today.

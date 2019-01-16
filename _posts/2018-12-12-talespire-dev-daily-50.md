@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 50
 description:
 date: 2018-12-12 00:29:24
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 I hadn't expected to be doing a fairly hefty refactor of the board loading today but that's where I've found myself. I'm trying to nail down the behavior that occurs when the user you are syncing the board from leaves during that sync, or if the sync fails, or.. well you get the idea, we are looking at failure cases and how they behave.

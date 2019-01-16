@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 51
 description:
 date: 2018-12-12 23:52:24
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Today we landed the new UI, we are now hooking it up and squashing bugs.

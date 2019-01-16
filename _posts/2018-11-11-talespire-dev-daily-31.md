@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 31
 description:
 date: 2018-11-11 23:30:48
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Today was spent chasing down smaller issues and, for features that need UI work, writing down behaviors which I don't think we have defined well enough.

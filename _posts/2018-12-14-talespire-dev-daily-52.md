@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 52
 description:
 date: 2018-12-13 23:49:47
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Today has gone well. Not a whole bunch of stuff to tell but the invite panel is fine now and ui work is continuing steadily.

@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 43
 description:
 date: 2018-12-01 00:21:06
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Work rolls onwards. Unique creatures seem to be working ok. I still want to persist who controls them across sessions so I've added the server-side code for that, now I just need to hook that up client-side.

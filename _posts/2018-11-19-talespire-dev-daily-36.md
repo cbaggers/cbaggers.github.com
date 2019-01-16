@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 36
 description:
 date: 2018-11-19 21:15:57
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 After a couple of days of quiet I'm back. Saturday I was just tired and Sunday I wasn't working due to a headache (probably just a bit overloaded).

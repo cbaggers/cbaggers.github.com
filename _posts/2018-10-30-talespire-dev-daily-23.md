@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 23
 description:
 date: 2018-10-30 20:47:47
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Motivation is a fickle thing, after cranking through a bunch of quick tasks I end up craving something more meaty and meaningful to slam my head against, but give that month and I'm just craving the quick reward cycles of small tasks again.

@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 46
 description:
 date: 2018-12-05 00:18:09
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Evening all! Today has seen a bunch of bug fixes which are rather specific but I'll mention a few.

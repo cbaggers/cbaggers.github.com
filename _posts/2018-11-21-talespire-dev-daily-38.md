@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 38
 description:
 date: 2018-11-21 17:38:38
 category:
-tags: ['TaleSpire', 'Bouncyrock']
+tags: ['TaleSpire', 'BouncyRock']
 ---
 
 Today went pretty well. I mainly focused on adding invite codes for campaigns. This simply gives you a shortcode that your friends can paste into TaleSpire to join your otherwise hidden campaign.

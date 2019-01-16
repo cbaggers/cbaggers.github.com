@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 32
 description:
 date: 2018-11-12 23:20:26
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Good evening! Today I got the multiplayer undo/redo code merged in, fixed some bugs related to NetworkIDs for objects and started planning the code to handle host migration.
