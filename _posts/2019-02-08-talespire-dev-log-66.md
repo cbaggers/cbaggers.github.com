@@ -4,7 +4,7 @@ title: TaleSpire Dev Log 66
 description:
 date: 2019-02-08 08:25:53
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Heya folks. A quick one today. With both some life business and serialization fixes out of the way it is finally time to get back to tickets. People have been amazing at filing them so the fact I haven't been triaging these for a week sucks. I'm gonna get through reproducing as many as I can today so I can then focus on fixing next week.

@@ -4,7 +4,7 @@ title: TaleSpire Dev Log 64
 description:
 date: 2019-02-05 22:43:30
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Today I finished testing the fixes for serializing board-assets with state (doors, chests etc). There will be one side-effect when this goes out and that is all door/chests etc will revert to their default state.

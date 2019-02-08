@@ -4,7 +4,7 @@ title: TaleSpire Dev Daily 60
 description:
 date: 2019-01-23 13:04:13
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 Hey again, I've not written for a few days as it would have been a 'still working on the same thing' post.

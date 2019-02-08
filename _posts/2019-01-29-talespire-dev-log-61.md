@@ -4,7 +4,7 @@ title: TaleSpire Dev Log 61
 description:
 date: 2019-01-29 22:04:06
 category:
-tags: ['Bouncyrock', 'TaleSpire']
+tags: ['BouncyRock', 'TaleSpire']
 ---
 
 I've changed the name until I get my arse back in gear and start doing these daily again.
