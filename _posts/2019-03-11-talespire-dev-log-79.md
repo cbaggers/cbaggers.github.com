@@ -11,11 +11,11 @@ Today has been fun. Hacking together small features feels super rewarding after 
 
 Today I got size indicators working for multi-select and dragging out tiles. The multi select version needs a little work as sometimes the rounding produces slightly unintuitive values, but that should be a quick fix so you should have this in your hands in the midweek update
 
-<video controls src="/assets/videos/sizeIndicator0.mp4" type="video/mp4" width="620">
+<video controls src="/assets/videos/sizeIndicator0.mp4" type="video/mp4" width="620"></video>
 
 Next I started work on another community requested feature, torches for creatures.
 
-<video controls src="/assets/videos/creatureTorch0.mp4" type="video/mp4" width="620">
+<video controls src="/assets/videos/creatureTorch0.mp4" type="video/mp4" width="620"></video>
 
 This one still needs a few tweaks so I'm expecting this will be in the weekend update.
 
