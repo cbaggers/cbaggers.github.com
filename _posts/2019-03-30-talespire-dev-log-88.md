@@ -22,3 +22,5 @@ The ui layer currently showing the creatures names is going to be greatly expand
 There's other stuff in the works of course, keep and eye out for another alpha update soon.
 
 Peace.
+
+![names](/assets/videos/names.gif)
