@@ -24,3 +24,5 @@ There's other stuff in the works of course, keep and eye out for another alpha u
 Peace.
 
 ![names](/assets/videos/names.gif)
+
+p.s. Almost forgot. We now have a site to check if you have been sent an invite key. Check it out here: http://keys.talespire.com/
