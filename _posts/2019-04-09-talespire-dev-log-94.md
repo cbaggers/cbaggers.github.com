@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TaleSpire Dev Log 92
+title: TaleSpire Dev Log 94
 description:
 date: 2019-04-09 00:15:02
 category:
