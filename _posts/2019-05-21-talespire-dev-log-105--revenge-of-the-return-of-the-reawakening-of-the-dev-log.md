@@ -13,7 +13,7 @@ Today I've re-read all of the #feature-request channel and broken it down into 1
 
 Ree and I then filtered them into piles of things we will be doing, things that will be addressed in some other form and things that don't fit TaleSpire.
 
-That list was then pounded with hammers until merged with our internal feature list and a Kickstarter feature list was born! This is one of the main things we'll be talking about in the dev stream we are hosting tomorrow. You can find the event for that &&&&& here &&&&&
+That list was then pounded with hammers until merged with our internal feature list and a Kickstarter feature list was born! This is one of the main things we'll be talking about in the dev stream we are hosting tomorrow. You can find the event for that [here](https://www.twitch.tv/events/DS_alf9EQkuaNKCj3cv5MA)
 
 I've then continuing to prepare for the stream. It's nice to see this taking shape and I'm looking forward to sharing all this stuff with you tomorrow.
 
