@@ -9,7 +9,7 @@ tags: ['BouncyRock', 'TaleSpire']
 
 Heya folks, @Baggers here again,
 
-I didn't write a log last night as what I thought was a quick nap on the sofa turned into sedation usually reserved for surgery.
+I didn't write a log last night as what I thought was a quick nap on the sofa turned into the kind of sedation usually reserved for surgery.
 
 On Friday I wrapped up the experiments I was doing with resource loading in Unity. I was able to load the icons and index of assets at startup which significantly dropped the pause at first campaign load. The branch i was doing the experiments on is rather a mess so I'll need to clean that up but it looks promising.
 
