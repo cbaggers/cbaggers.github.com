@@ -20,3 +20,20 @@ Lastly as fun bit (for me). For a time I was really enjoying that I was able to 
 So now I get to go remove some 'local dev' hacks and I get a simpler, more realistic, fully local, dev environment. LOVE IT.
 
 Alright, that's all the fun nerdage for now, back to planning :)
+
+p.s. 
+One thing I got stuck on initially with epmdless was that I was using `rebar3 shell` in the entrypoint script for my container. This will not work with epmdless as the epmd module vm args would need to be passed to shell and that would then freak out as it wouldnt know where to find the epmdless module. So instead try having the entrypoint script make a debug release of your erlang app and then start that in foreground mode. Then your `config/vm.args` will be used and everything will work fine. 
+
+Also, remember to expose the remsh port for epmdless so you can use the remote shell. I used this for my erlang repl settings in emacs. Once you have the official examples running most of this should be fairly self explanatory.
+
+```
+(setq inferior-erlang-machine-options
+      '("-env" "EPMDLESS_DIST_PORT" "18999"
+        "-env" "EPMDLESS_REMSH_PORT" "18000"
+        "-name" "emacs@vanguard0.com"
+        "-setcookie" "cookie"
+        "-remsh" "myapp@myapp.com"
+        "-proto_dist" "epmdless_proto"
+        "-epmd_module" "epmdless_client"
+        "-pa" "/app/_build/default/lib/epmdless/ebin/"))
+```
