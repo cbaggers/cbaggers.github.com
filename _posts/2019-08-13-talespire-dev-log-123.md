@@ -7,7 +7,7 @@ category:
 tags: ['Bouncyrock', 'TaleSpire']
 ---
 
-Day two of the dev planning and again things went well. The main task today was going back through the task lists and working out which ones would be dependent on which. This is important so we don't get blocked by each other and that, for the cases where the is a dependency, there will be work the blocked person can be doing.
+Day two of the dev planning and again things went well. The main job today was going back through the task lists and working out which ones would be dependent on which. This is important so we don't get blocked by each other and that, for the cases where the is a dependency, there will be work the blocked person can be doing.
 
 We wont be putting out these orders as they will change and we'd like to keep things flexible.
 
