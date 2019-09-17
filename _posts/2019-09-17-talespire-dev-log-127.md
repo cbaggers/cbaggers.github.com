@@ -13,7 +13,7 @@ This is not the exact way we are doing things in TaleSpire, but it's an explorat
 
 In this post, I'm only going to talk about placing/deleting tiles rather than creatures to keep things simpler.
 
-## Chapter 1 - Building basics
+### Chapter 1 - Building basics
 
 So lets first have a look at a little building:
 
@@ -93,6 +93,7 @@ Ok so let's look at our old data layout
 tile-data = [add(* * *), add(* *)]
 undone-data = []
 ```
+
 Now let's make this a single array, and instead of undo removing one and adding to another we with have an index which we will call the `active-head`. It will point to the most recent active chunk of tiles
 
 ```
@@ -100,6 +101,7 @@ Now let's make this a single array, and instead of undo removing one and adding 
 tile-data = [add(* * *), add(* *)]
 
 ```
+
 Our `active-head` is represented by the `v` above `tile-data` in code it'll just be an integer.
 
 With that change undo looks like this
@@ -137,6 +139,7 @@ tile-data = [* * * * *]
           v
 layout = [3 2]
 ```
+
 and redo is still the reverse. This means undo and redo are still as simple as changing an integer from the data-model side[3]
 
 
@@ -148,6 +151,7 @@ tile-data = [x * x x *]
             v
 layout = [3 2]
 ```
+
 This is no good as now we have to handle this. We could have each tile have a flag that says if it's alive or dead. We would then need to check that any time we scan over this array. This is ok but, unless we undo the delete, we still have memory being wasted as it's occupied by data for tile that been deleted. So maybe we reuse the gaps? Sounds great, but we can't fill in the gaps with tiles from newer operations as otherwise, we lose the property that tile-data is in 'history order' and thus lose the ability for undo/redo to be represented by the `active-head`.
 
 So if we don't want holes but can't fill them then another option is to compact the array as we delete, so whenever tile data is deleted the tile data to the right is shifted left to fill in the gaps. This requires more copying during the delete but let's assume we profiled it and it proved to be the best option[4]. This is what we will assume for the rest of the article.
@@ -160,6 +164,7 @@ tile-data = [* *]
             v
 layout = [1 1]
 ```
+
 Neat! but we should note we have complicated `undo` for ourselves. If we undo a delete We will have to 'make room' in tile-data for the old tiles to be copied back into. There is one blessing though, we only care that chunks are in history order, not the tiles within the chunks. That means we don't need to make room in the same places as we had the tiles originally...
 
 ```
@@ -170,6 +175,7 @@ layout = [3 2]
 ```
 
 Rather, we can make room at the end of each chunk...
+
 ```
                      v
 tile-data = [* _ _ * _]
@@ -184,7 +190,7 @@ This also simplifies redo of a delete, can you spot how?
 Originally we had to scan through the tiles to find the ones to delete. Redo requires us to delete those same tiles again but we know exactly where they are now, they are at the end of each chunk.
 
 
-## Chapter 2 - Multiple players and a quandary
+### Chapter 2 - Multiple players and a quandary
 
 Now things get 'fun'. We can have up to 16 players on a board at a single time and all of them could be given the permissions to build. That means we need to keep that all in sync on all machines but all make sure everything feels instant.
 
@@ -208,13 +214,14 @@ tile-data = [p0 p0 p1 p1 p0 p0]
               v
 layout = [2 2 2]
 ```
+
 So three chunks of tiles have been added. First `player0` (`p0`) added 2 tiles, then `player1` (`p1`) added 2 and then `p1` added 2 more.
 
 Now let's say `p1` hits undo, that means the middle two tiles need to be undone but we can't do this just by shifting the active head.
 
 Here we face two choices, either we drop the `active-head` approach or keep it and find a way around the above issue. Neither way is wrong and both require changes to how the data will be stored. For the sake of the article, I am just going to continue with the active head approach so we can see how this has to be modified to keep its nice properties in the face of multiple players.
 
-## Chapter 3 - Multiple Players with the active-head approach
+### Chapter 3 - Multiple Players with the active-head approach
 
 OK, so let's say we like the way we can just change a single integer to represent undo/redo using the active-head approach. What would be needed to keep this working with multiple players?
 
@@ -230,6 +237,7 @@ p1-data = [p0 p0]
              v
 p1-layout = [2]
 ```
+
 This lets us regain the quality that undo for `p1` only affects `p1`'s data.
 
 From now on let us say that if a tile is in `p0-data` then `player0` 'owns' that tile and if the tile is in `p1-data` then `player1` 'owns' that tile. With that little bit of terminology, we can look at delete again.
@@ -261,13 +269,13 @@ The addition of more per player data probably feels annoying (it did to me) but 
 - an undo of the delete shifts the active-head to the left, the things to the right are now active in-game
 - a redo of the delete shifts the active-head right again
 
-## Conclusion
+### Conclusion
 
 This might feel like it's all getting a bit out of hand. That is a fair conclusion to make! This is why I said at the beginning this writeup is just an exercise in following an idea through to where it leads rather than making a call on the best approach. I hope you have some thoughts on this and also a feeling for where this kind of feature can get complicated.
 
 I have left out a bunch of things like "how do we maintain the mapping between the tile data my game engine's game objects when our data can only contain Blittable types?" and "How long can undo/redo histories be?". They are fun in themselves as I do recommend considering them if you decide to try and come up with your own schemes.
 
-## Notes
+### Notes
 
 [0] For example imagine `player0` placing a block of tiles, then `player0` deletes those tiles, then `player1` places some tiles in that (now empty) spot. Finally `player0` undoes their delete and suddenly `player1`'s tiles intersect with `player0`'s.
 
