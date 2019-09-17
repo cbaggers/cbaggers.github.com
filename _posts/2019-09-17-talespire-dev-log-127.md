@@ -81,7 +81,7 @@ So about those zones.. how many are going to be involved? Let's look at this 2d 
 
 ![2d selection example](/assets/images/selectZones.png)
 
-Notice how, as the size increases the number of `zone`s we need to consider is going up by the width*height and it's more painful in 3D as it's increasing by width*height*depth, so roughly cubing with respect to edge length. This is going to be quite a lot of zones to check. But how many tiles can a zone hold? Well a zone is 16x16x16 but a tile can be as small as 1x0.25x1 then that is 16x64x16 tiles 16384tiles...ugh this is getting to be a lot of work.
+Notice how, as the size increases the number of `zone`s we need to consider is going up by the `width x height` and it's more painful in 3D as it's increasing by `width x height x depth`, so roughly cubing with respect to edge length. This is going to be quite a lot of zones to check. But how many tiles can a zone hold? Well a zone is 16x16x16 but a tile can be as small as 1x0.25x1 then that is 16x64x16 tiles 16384tiles...ugh this is getting to be a lot of work.
 
 But a ray of hope appears, notice the hatched areas in the diagram above. Those are zones that are completely enclosed by the selection. Naturally, this means a `delete` operation will delete all the tiles within so we have an opportunity for a big optimization. For any zone that is completely enclosed we just remove all tiles, and we only compare the selection with the tiles themselves for zones that are only partially intersected by the selection. In general, this means the outer 'surface' of `zone`s. The number of zones on the surface of the selection grows roughly in the order of (x^3 - max(x-2, 0)^3) which is much more manageable.
 
