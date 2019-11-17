@@ -37,7 +37,7 @@ Those clouds are spheres, with lots of magic on top (if you watch the whole thin
 
 Given those two points, I decided a good source of wisdom would be the kinds of algorithms that Minecraft-like games often use. Luckily for me [Mikola Lysenko of 0fps.net](https://0fps.net) has written [some amazing articles on these techniques](https://0fps.net/category/programming/voxels/page/1/) along with WebGL demos and source code, what a star! This gave me a huge boost and along with a few implementation tips from other sources I was able to put together a 'Greedy Mesher' (the name of one of the techniques) in Unity. Now, this next picture is *not* meant to be clouds, it was just a test to make sure it was working.
 
-![/assets/images/jobifiedMesher0.png]
+![greedy mesher](/assets/images/jobifiedMesher0.png)
 
 For the coders out there, I also made this implementation using Unity's job system which allows me to run the mesh generation jobs in parallel across all cores. It's pretty speedy considering how little effort was required.
 
@@ -49,7 +49,7 @@ Next on my list of concerns was interactable Tiles and modding.
 
 We have a bunch of interactable tiles in TaleSpire and this is only going to increase as we open up the ability for the community to make them.
 
-!(sidetable)[/assets/videos/sideTable0.gif]
+![sidetable](/assets/videos/sideTable0.gif)
 
 A real pain point when you make a  user-driven content game like TaleSpire is that you have no way to know when or where someone will just suddenly throw tonnes of extra stuff for your game to do.
 
@@ -120,7 +120,7 @@ It took 18 hours to get the first version up and running and the results were pr
 
 Here is a picture of some nonsense 'code'
 
-!(behaviour)[/assets/images/spaghet0.png]
+![behaviour](/assets/images/spaghet0.png)
 
 The graph above (whilst being gibberish) can be run for 10000 tiles in around 2ms, which is way slower than it will be but it's acceptable for a first pass. It told me the approach was worth more work so I took Friday to flesh it out a bit.
 
@@ -130,7 +130,7 @@ With that we have the kind of script that can be used for the 'not story critica
 
 To that end, I'm now working on how to script the [state machines](https://en.wikipedia.org/wiki/Finite-state_machine) that will run the important stuff. Here is a little picture of the prototype I'm currently working on:
 
-!(statemachine)[/assets/images/spaghet2.png]
+![statemachine](/assets/images/spaghet2.png)
 
 Naturally, the look of the graph and the nodes available will be improved too.
 
