@@ -31,7 +31,7 @@ Now there are a couple of points to keep in mind:
 
 As a great example check out this tweet from [@Ed_dV](https://twitter.com/Ed_dV) !
 
-https://twitter.com/Ed_dV/status/1169153878841004033
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Inspired by Sea of Thieves and Sky, I&#39;ve been playing with opaque polygonal clouds - sphere meshes that have their normals softened and distorted via command buffer. Still lots to work out, but progress is being made! No animation yet, just aiming for a fluffy render first. <a href="https://t.co/WVyk7X5p5b">pic.twitter.com/WVyk7X5p5b</a></p>&mdash; Edward del Villar (@Ed_dV) <a href="https://twitter.com/Ed_dV/status/1169153878841004033?ref_src=twsrc%5Etfw">September 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Those clouds are spheres, with lots of magic on top (if you watch the whole thing it shows the spheres without the magic).
 
@@ -49,7 +49,7 @@ Next on my list of concerns was interactable Tiles and modding.
 
 We have a bunch of interactable tiles in TaleSpire and this is only going to increase as we open up the ability for the community to make them.
 
-![/assets/videos/sideTable0.gif]
+!(sidetable)[/assets/videos/sideTable0.gif]
 
 A real pain point when you make a  user-driven content game like TaleSpire is that you have no way to know when or where someone will just suddenly throw tonnes of extra stuff for your game to do.
 
@@ -120,7 +120,7 @@ It took 18 hours to get the first version up and running and the results were pr
 
 Here is a picture of some nonsense 'code'
 
-![/assets/images/spaghet0.png]
+!(behaviour)[/assets/images/spaghet0.png]
 
 The graph above (whilst being gibberish) can be run for 10000 tiles in around 2ms, which is way slower than it will be but it's acceptable for a first pass. It told me the approach was worth more work so I took Friday to flesh it out a bit.
 
@@ -130,7 +130,7 @@ With that we have the kind of script that can be used for the 'not story critica
 
 To that end, I'm now working on how to script the [state machines](https://en.wikipedia.org/wiki/Finite-state_machine) that will run the important stuff. Here is a little picture of the prototype I'm currently working on:
 
-![/assets/images/spaghet2.png]
+!(statemachine)[/assets/images/spaghet2.png]
 
 Naturally, the look of the graph and the nodes available will be improved too.
 
