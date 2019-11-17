@@ -18,9 +18,9 @@ I've finally broken through the wall of fiddly details that was plaguing my boar
 
 First off I went back to Fog of War. Basically, the task is this:
 
-> 1. Take a 16x16x16 grid
-> 2. In every cube write 'true' if there is meant to be fog there and 'false' if not
-> 3. Now take this info and make a 3D mesh that contains all the cells marked 'true'
+1. Take a 16x16x16 grid
+2. In every cube write 'true' if there is meant to be fog there and 'false' if not
+3. Now take this info and make a 3D mesh that contains all the cells marked 'true'
 
 And I wanted to make sure we had step `3` worked out.
 
