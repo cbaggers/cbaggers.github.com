@@ -25,9 +25,9 @@ We aren't going to talk about rendering any more in this post but we will revisi
 
 So we have a TileSpire-like game where we want to have the players be able to make tonnes of tiles, they should be able to drag out or paste big slabs and the delete individual tiles as they please.
 
-So if someone drags out a 30x30 slab, we need to spawn 900 tiles. Depending on the complexity of the tile Unity might not be able to handle instantiating that many new GameObjects in a single frame. This is serious though as when people are building we have building actions arriving from other players fairly frequently and we wouldn't be able to apply the changes robustly until all the GameObjects are made.
+If someone drags out a 30x30 slab, we need to spawn 900 tiles. Depending on the complexity of the tile Unity might not be able to handle instantiating that many new GameObjects in a single frame. This is serious though as when people are building we have building actions arriving from other players fairly frequently and we wouldn't be able to apply the changes robustly until all the GameObjects are made.
 
-So the first split is to keep the data for Tiles separate from their GameObjects. This also gives us opportunities to store that data in [blittable](https://docs.microsoft.com/en-us/dotnet/framework/interop/blittable-and-non-blittable-types) types and use Unity's Job system to operate on them (like we talked about in the [last post](https://bouncyrock.com/news/articles/talespire-dev-log-133))
+The first change we could make is to keep the data for Tiles separate from their GameObjects. This also gives us opportunities to store that data in [blittable](https://docs.microsoft.com/en-us/dotnet/framework/interop/blittable-and-non-blittable-types) types and use Unity's Job system to operate on them (like we talked about in the [last post](https://bouncyrock.com/news/articles/talespire-dev-log-133))
 
 > I'm going to shift from talking explicitly about tile data and GameObjects to talking about the tile data and it's 'presentation' unless the fact that GameObjects are involved is important
 
