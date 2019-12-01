@@ -11,9 +11,9 @@ Alright, part 2!
 
 So in the last post, we talked about updating the data representation of the board. This time let's get into the bit the players see and interact with. The GameObjects.
 
-In Unity's currently supported approach, any *thing* in the world is a GameObject[0]. GameObjects do very little on their own but their properties and behavior come from Components.[2]
+In Unity's currently supported approach, any *thing* in the world is a GameObject[0]. GameObjects do very little on their own but their properties and behavior come from Components.[1]
 
-We don't need to understand much more about this for now except that Unity naturally has to manage all these GameObjects and, as with much of the API, you can only interact with them from the main thread.
+We don't need to understand much more about this for now except that Unity naturally has to manage all these GameObjects and, as with much of the API, you can only interact with them from the main thread.[2]
 
 ## Rendering
 
