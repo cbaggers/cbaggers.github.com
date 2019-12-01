@@ -13,7 +13,7 @@ There have been no daily updates for the last six days as I've been in a sort of
 
 The first one was related to the performance of Add/Delete/Undo/Redo operations on tiles. The faster we do this the better and we have a bunch of opportunities to make this quick. The first was to move the core code of these features over to Unity's [Job System](https://docs.unity3d.com/2018.3/Documentation/Manual/JobSystemOverview.html).
 
-## Why we really have to care about performance
+### Why we really have to care about performance
 
 For newer arrivals to these writeups, performance may seem an odd concern for a game where the rate things are happening seems much lower than that of, for example, an FPS. For us, it's not the frequency of actions that plague us but the volume of work that can be created by them, and the fact there is no general pattern to when they happen.
 
@@ -29,7 +29,7 @@ For example, dragging out a 3x3 square creates 9 tiles, but 30x30 is 900 tiles.
 
 All of this isn't to complain, we want the game to behave like this, but we do need to be clear to ourselves on what needs to be achieved within the 16ms of a frame[1]
 
-## Jobs
+### Jobs
 
 So back to the jobs. One of the first things I looked at was the collections we use to store the tile data. As of today, the data for tiles are split up somewhat like this:
 
@@ -43,7 +43,7 @@ As you can imagine we have lots of opportunities for performing operations in pa
 
 Also as each client's data is separate within the zone we have opportunities here too. This has so far been less useful as an Add only affects the data of the client that performed it, and during deletes, we want to store the tiles that were deleted for undo/redo and so that would require collections that concurrently have arbitrary numbers of tiles written into them. Making a new collection type to cover this case was too much of an additional distraction and the common case is one or two people building so there is less parallelism to be gained here anyway. [3]
 
-## A diversion into better collections
+### A diversion into better collections
 
 Here is a rough idea of how AssetData is laid out.
 ```
@@ -65,7 +65,7 @@ It has a Capacity, and ActiveLength and a FullLength. The FullLength is the appa
 
 Unlike NativeList we don't every reduce the capacity unless explicitly required to (as the data past the ActiveLength is often still valuable to us)
 
-## Back to jobs and the problem with multiple people building
+### Back to jobs and the problem with multiple people building
 
 Alright, so armed with new collections the work Jobifying everything continued. After a bunch of wrestling and learning, I got this into shape and so now the data updates are parallel. Yay!
 
@@ -105,7 +105,7 @@ With all this in place, we get to totally remove snapshots. It requires a bunch 
 
 This is one of those lovely times where data layout fundamentally change what has to be done to implement a feature. I find that stuff pretty cool.
 
-## MORE!
+### MORE!
 
 This post has got long enough but there is still plenty more to cover from this week so let's get back to it in the next post.
 

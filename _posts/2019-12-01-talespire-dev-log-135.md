@@ -13,11 +13,11 @@ We have talked about updating the data and the presentation but we still have to
 
 In TaleSpire we want to be able to have animate tiles as they appear and disappear as it makes the game feel better. We have a lot of tiles to update so we have to take care of how we do this.
 
-## A simple problem
+### A simple problem
 
 We wouldn't want to have to update the positions of the GameObjects every frame so we animate the drop-in using the vertex shader. The animation curves are simply stored as ramps inside textures we can sample over time. This means we only have to update the per-instance data for the GameObjects when we want to change which animation they are running.
 
-## A secondary problem
+### A secondary problem
 
 One annoying thing though is that, when changes to this state do come, they tend to come in large numbers. One example of this is during tile selection.
 
@@ -35,7 +35,7 @@ Obvious that is insane and we will need to add some form of density limit, but t
 
 Once again user-generated-content games bring their own flavor of crazy to the party :)
 
-## The secondary problem with a hat on
+### The secondary problem with a hat on
 
 But we aren't done, oh no we are not. Last time we talked about progressively applying changes to the presentation. Due to this, a selection can be made on tiles that are still spawning. According to the data layer, you selected perfectly valid tiles but the presentation hadn't quite caught up. Maybe the tile spawned the frame after you let go of the selection and so as far as you percieved it was there when you let go.
 
@@ -43,7 +43,7 @@ Now there are different ways to resolve this but the way I want to go with for n
 
 I expect this to be an edge case that people won't even notice, but it is better to have an answer for it.
 
-## One change
+### One change
 
 So let's talk about one change that helps here. What we are going to do is move the tile's animation state out of its per-instance data and into a separate [buffer on the gpu](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html) (let's call this the tile-state-buffer). Then we will put the index into that buffer into the tile's per-instance data instead.
 
@@ -55,7 +55,7 @@ Next, we just gained the option to push only part of the local buffer to the GPU
 
 This also plays nicely with our selection -v- progressive update issue. We can now make the changes to the tile-state-buffer independent of whether the presentation for the tile has finished loading yet. As soon as the GameObjects are spawned they will put their state index into their MaterialPropertyBlock and they will be up to date immediately.
 
-## And another thing
+### And another thing
 
 One obvious this I skipped when presenting the selection problem is that updating all tiles in the selection is totally unnecessary. We only actually need to update the shader state for the tile that has become selected or unselected since the last frame.
 
@@ -79,7 +79,7 @@ From the following diagram, we can see that in 2d that means you are inside one 
 
 Given that we can control how fast the panning in the game is this makes the number of tiles to update per frame much less. I left this until now though as selection makes a great example of the issue of tile counts in volumes and we have other operations for volumes that benefit from these changes too.
 
-## More? More.
+### More? More.
 
 Well, this got long. I think I'm gonna save the miscellaneous stuff for another post.
 

@@ -15,13 +15,13 @@ In Unity's currently supported approach, any *thing* in the world is a GameObjec
 
 We don't need to understand much more about this for now except that Unity naturally has to manage all these GameObjects and, as with much of the API, you can only interact with them from the main thread.[2]
 
-## Rendering
+### Rendering
 
 One of the nice things Unity does do for us is handling instancing so that it's fast to draw many of the same kind of object. For example, if we have 1000 of the same tile in the scene then Unity can make one draw call to the GPU to draw them all.[3]
 
 We aren't going to talk about rendering any more in this post but we will revisit it in the next one as there are some issues we need to overcome.
 
-## Spawning
+### Spawning
 
 So we have a TileSpire-like game where we want to have the players be able to make tonnes of tiles, they should be able to drag out or paste big slabs and the delete individual tiles as they please.
 
@@ -33,7 +33,7 @@ The first change we could make is to keep the data for Tiles separate from their
 
 With this, we have the opportunity to make the data changes immediately and apply them over a number of frames. This is the approach we are using and is a part of why we want to apply data changes as fast as possible, because there may be multiple arriving in a single frame.
 
-## Relationship management
+### Relationship management
 
 One issue we have given ourselves is that, now that the data and presentation are separate, we need to keep then in sync. If someone deletes a tile we need to delete the presentation too and, naturally, the same goes for undo/redo/etc. We could keep an index from the data to the representation but this has implications:
 
@@ -44,7 +44,7 @@ Now you may not care about either of those, which is valid too. But whichever wa
 
 One simplification we can do is to note that tile data is added in chunks. If we keep presentations of tiles from the same chunk together then you only need indices per chunk, this can help in the approach you pick.
 
-## Avoiding work
+### Avoiding work
 
 Other than being able to spread out work over multiple frames we get some trivial opportunities to avoid work too.
 
@@ -52,19 +52,19 @@ First off, if we can apply changes to data first and then generate the changes t
 
 Also in the case where there is a small backlog you can get opportunities to skip entire actions. The best case is an Undo & Redo together (this can happen when people are playing around to see if they like a particular change). In that case, you can remove both actions from the queue as they cancel each other out.
 
-## You don't always need to present anyway
+### You don't always need to present anyway
 
 If you have players in two different parts of the board you may want the data for the zones in memory but not have to have a presentation of the Zone you are nowhere near. This is trivial here as the data is separate.
 
 This makes jumping to that part of the board much less jarring than it would be as you are already to date with the latest version of that part of the board.
 
-## Applying changes
+### Applying changes
 
 A Zone's presentation now gets given a 'budget' of how much it can change this frame. It keeps popping changes from its queue and applies as much as it can until the budget runs out. The budget is represented by a floating-point number and we give separate costs to spawning tiles, reusing ones from the GameObject pool, deleting tiles, etc.
 
 These numbers are made up by us but they are easily tweakable so we have a lot of freedom now to profile and find out what works. We'll chat more about this in the future when we get more data.
 
-## Sticking it together
+### Sticking it together
 
 So we are doing a bunch of these things. We have a separate presentation for each Zone. They each have queues of changes to apply which, due to how tiles are managed in data, mainly boils down to adding and deleting chunks of GameObjects by their Id.
 
@@ -74,7 +74,7 @@ We don't maintain any indexes between the data and presentation (beyond unique i
 
 We don't do all the work avoiding stuff yet but the hooks are in the code so we can add this easily when we want to. First off I need to iron out the bugs that remain.
 
-## Next post
+### Next post
 
 Ok so that wraps up this post, in the next one, we need to talk a little about rendering and a few miscellaneous bits and bobs we've also done this past week.
 
