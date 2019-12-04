@@ -47,7 +47,7 @@ I'm guessing that this is a hint to the intermediate copies (and maybe a tempora
 
 After moving over to that, I started getting values higher than one out of the texture YAY! The values are wrong, but frankly, I don't care about it today. The pieces of the puzzle have all been started, and I can work on those from home. It's best to use this time I have over here to touch on as many other things as possible.
 
-## The rest of today
+### The rest of today
 
 There have been more chats working out details of performance around tile hide and cutaway and much musing on how to merge out branches in a way that doesn't slow us down.
 
