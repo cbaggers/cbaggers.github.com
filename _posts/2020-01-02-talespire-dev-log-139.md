@@ -11,7 +11,7 @@ Over the break, I've put down the front-end code to begin getting a handle on th
 
 ### Reading things
 
-- https://erlang.org/doc/man/gen_event.html some of the http handling code got a bit centralized a was slowing me down when making changes. I hadn't used `gen_event's before as I found them a bit confusing. They are somewhat different than `gen_server` and `gen_fsm` as you don't implement the manager but instead just the callbacks. It's pretty neat once you grok it, though.
+- https://erlang.org/doc/man/gen_event.html some of the http handling code got a bit centralized a was slowing me down when making changes. I hadn't used `gen_event`'s before as I found them a bit confusing. They are somewhat different than `gen_server` and `gen_fsm` as you don't implement the manager but instead just the callbacks. It's pretty neat once you grok it, though.
 - http://blog.differentpla.net/blog/2014/11/07/erlang-sup-event/ one part of understanding `gen_event` is knowing how to include it in your supervision trees. This covers those bits that mostly seem left out of other tutorials.
 - https://github.com/cabol/erlbus/ erlbus is an important piece of the changes I'm making, and so I've been getting familiar with it's approach. It also contains one of the more lucid examples of using websockets in erlang, which was helpful in other tests.
 - https://www.phoenixframework.org/blog/the-road-to-2-million-websocket-connections An inspiring read. Little bits and bobs scattered throughout that were useful. Also, it's just nice to see what certain pieces we use can potentially deliver (although we naturally aren't doing this).
