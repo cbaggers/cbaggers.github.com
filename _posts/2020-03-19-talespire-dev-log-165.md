@@ -13,13 +13,13 @@ Yesterday went pretty well. I was able to deploy the production DB, two servers,
 
 One thing that took me a little bit to grok was how the two Erlang nodes were meant to find each other given only the node's name. [This article](https://hackernoon.com/running-distributed-erlang-elixir-applications-on-docker-b211d95affbe) talks about how epmdless is great, but how you also need something extra when the docker containers are on separate machines. We use [epmdless_dist](https://github.com/scrapinghub/epmdless_dist) like the article shows, but the example has this code:
 
-`"
+```
 epmdless_dist:add_node(‘app1@host1.com’, 17012). % Add node into epmdless database
-`"
+```
 
 And I didn't understand how erlang would know the address of my other server unless it was assuming that the `@host1.com` portion was the name for the server as well as the container. It turns out this confusion was valid, and there are a few variants of the `add_node` function. The one I needed was `add_node/3`. Here is the spec:
 
-`"
+```
 -spec add_node(Node, Host, Port) -> ok when
       Node :: atom(),
       Host :: inet:hostname() | inet:ip_address(),
