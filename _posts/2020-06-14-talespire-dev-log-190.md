@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TaleSpire Dev Log 191
+title: TaleSpire Dev Log 190
 description:
 date: 2020-06-14 17:08:38
 category:
