@@ -13,7 +13,7 @@ I've been poking a little at the occlusion culling so I thought I'd show somethi
 
 We are not moving to Unity's scriptable rendering pipeline yet and so much of the work I'm doing right now is finding how we should hook into Unity's traditional rendering stack.
 
-I really like [BatchRendererGroup](https://docs.unity3d.com/ScriptReference/Rendering.BatchRendererGroup.html) as it let's us set up bathces and not have to update them per frame[0]. We can then map the batch-id to a specific zone and kind of asset. This now means that any camera that is active (or told to render) will render the things we have submitted in those batches. 
+I really like [BatchRendererGroup](https://docs.unity3d.com/ScriptReference/Rendering.BatchRendererGroup.html) as it let's us set up bathces and not have to update them per frame[0]. We can then map the batch-id to a specific zone and kind of asset. This now means that any camera that is active (or told to render) will render the things we have submitted in those batches.
 
 We really want to use lower-poly meshes for the shadows and occlusion-culling so what we should put in those batches is actually the low poly-meshes (which we are going to call occlusion-meshes from now on). However we dont want to render the mesh itself to the final scene, we just want it to cast shadows in the main view and populate a depth buffer for us to use later.
 
@@ -23,7 +23,7 @@ Now those used to Unity might think of layers. You can tag objects with a specif
 - make a material using this, and use that in `AddBatch`
 - Render the scene from the same orientation using a camera with a replacement shader and with a depth RenderTexture as the target.
 
-What's nice about this is that lights will now use our occlusion-meshes but those meshes wont show up in the final render. By using lower poly meshes 
+What's nice about this is that lights will now use our occlusion-meshes but those meshes wont show up in the final render. By using lower poly meshes
 
 With the depth buffer available we now generate the depth-chain as mentioned in a previous dev-log. We then have everything we need to get into the meat bit of the occlusion culling. One we know what to draw we will use [DrawMeshInstancedIndirect](https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstancedIndirect.html) to submit the high-poly meshes for rendering. At this point we make sure to set `receiveShadows` to false and the `ShadowCastingMode` to `Off`, this lets us recieve the shadows we computed earlier without asking Unity to compute more from these more detailed meshes.
 
@@ -36,5 +36,47 @@ Next I need to work out a little mistake I've created in the depth-chain, refact
 [1] here is the shader we used in our recent tests
 
 ```
-< CODΕ GOES HERE :) >
+// Very minimal
+Shader "OccluderShadowCaster"
+{
+    SubShader
+    {
+        Pass
+        {
+            Tags {"LightMode"="ShadowCaster"}
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma multi_compile_shadowcaster
+            #pragma multi_compile_instancing
+            #include "UnityCG.cginc"
+
+            struct appdata
+            {
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+            };
+
+            struct v2f {
+                V2F_SHADOW_CASTER;
+            };
+
+            v2f vert(appdata v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                TRANSFER_SHADOW_CASTER_NORMALOFFSET(o)
+                return o;
+            }
+
+            float4 frag(v2f i) : SV_Target
+            {
+                SHADOW_CASTER_FRAGMENT(i)
+            }
+            ENDCG
+        }
+    }
+}
 ```
