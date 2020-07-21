@@ -17,7 +17,7 @@ I didn't write up yesterday as it was one of those days that you know you need t
 
 Today, however, I've been knocking together very simple nodes for the state-machine scripts that tiles can use. The closest thing I have to a visual is this:
 
-![oo nodes](/assets/video/stateMachine0.gif)
+![oo nodes](/assets/videos/stateMachine0.gif)
 
 This graph only expresses the state of the tile (or prop in future), and what actions transition between them. To do something visual, you will need the realtime-scripts.
 
