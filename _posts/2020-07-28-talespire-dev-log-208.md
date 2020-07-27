@@ -21,7 +21,7 @@ Now for the extended version of the story.
 
 Many backers have never been unable to play the TaleSpire beta due to a bizarre bug that means they get stuck waiting for TaleSpire to log in forever. Today I was once again struggling with this issue, so I decided to make a program to test the connection and make logs that would hopefully help us progress. I wanted the code to be as close to TaleSpire's as possible, so I took the whole game and spent several hours ripping out pieces until I got down to just the essentials for the main menu. I added some logging and ended up with this:
 
-![TsConnectionTest](/assets/videos.TsConnectionTest.gif)
+![TsConnectionTest](/assets/videos/TsConnectionTest.gif)
 
 With a new weapon in hand, I teamed up with a community member who had experienced the issue. For the next hour, they ran the test app and send me the logs. I would then modify the app and send them a new build. Together we finally got this trace.
 
