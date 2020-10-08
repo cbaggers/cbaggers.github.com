@@ -17,6 +17,8 @@ I saw that they kept track of their fixed steps in a slightly different way than
 
 I read that damn code forwards and backward and finally remembered that I had a test scene that had been surprisingly stable this whole time. It's the one I showed in an update a few weeks back. It looked like this:
 
+![popcord dice bug](/assets/videos/physicsGoofyTest2.gif)
+
 So what could this possibly have in common with the ECS tests I'd been doing, but that was also different from the main board scene. I suddenly got a hunch and couldn't help but laugh when it proved to be correct.
 
 The floor was too big.
