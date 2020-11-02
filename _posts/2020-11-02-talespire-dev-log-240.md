@@ -29,7 +29,7 @@ First, we'll ignore the scheme and behavior identifier, which leaves us with the
 
 Each path segment specifies a "dice group". The roll results of each dice group get totaled separately. You can see an example result from the above roll here:
 
-[multiple results](/assets/images/diceGroupsResults.png)
+![multiple results](/assets/images/diceGroupsResults.png)
 
 A dice group is parsed, right-to-left, case insensitively, with the following regex: `(\+|\-|)\d*D\d+(\+\d+|\-\d+|)`
 
