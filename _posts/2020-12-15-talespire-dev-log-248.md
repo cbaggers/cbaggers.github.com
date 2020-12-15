@@ -18,6 +18,6 @@ If all goes well, I hope to see some lights working tomorrow.
 Seeya then.
 
 
-[0] we need to use a command buffer as the
+[0] we need to use a command buffer as the light mesh has to be rendered at a specific point in the pipeline, specifically [CameraEvent.AfterLighting](https://docs.unity3d.com/ScriptReference/Rendering.CameraEvent.AfterLighting.html)
 
 [1] This one was kind of interesting. When setting the intensity parameter of the light, the color passed to the shader by Unity changed. In my test, the original color was white, so the uploaded values were `float4(1, 1, 1, 1)`, where the `w` component was the intensity. However, when I changed the intensity to 1.234, the value was `float4(1.588157, 1.588157, 1.588157, 1.234)`. It's not uncommon for color values to be premultiplied before upload (see premultiplied alpha), so I just made a guess that it might be gamma correction. To do this, we raise to the power of 2.2. One (white) raised to the power of anything will be 1. So instead, we try multiplying by the intensity and raising that to the power of 2.2. Doing that gives us `1.58815670083..etc` bingo!
