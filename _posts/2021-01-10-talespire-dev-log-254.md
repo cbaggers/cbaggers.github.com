@@ -45,7 +45,6 @@ After a bit more googling, I learned about the [D3D11_USAGE_STAGING](https://doc
 
 Now MJP is an excellent engineer who's blog posts have helped me to no end, so I was excited to see there might be an avenue here. There was only one sticking point, Unity doesn't expose `D3D11_USAGE_STAGING` in it's compute buffers. This meant I needed to break out c++ and learn to write native plugins for Unity.
 
-Native plugins allow you to write code in c/c++ and hook them into the
 Thanks to the examples, I was able to get the basics written, but something I was doing was crashing Unity A LOT. For the next `< insert embarrassing number of hours here >` I struggled with this that mapping the buffer would freeze or crash Unity unless done via a [plugin event](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.IssuePluginEvent.html). In my defense, this wasn't done in the example when writing to textures or vertex buffers, but I'm a noob at D3D, so no doubt I'm missing something.
 
 Regardless, after all the poking about, we finally get this:
