@@ -20,7 +20,7 @@ In TaleSpire, each change to the board is applied in the same order on all clien
 - When the board is finally delivered, deserialize it and discard all the recorded board change operations with IDs older than the one in the board sync file. 
 - Apply the remaining board change operations in order
 
-We now have a complication. Each client may old have a portion of the board locally. Ideally, we only want to sync the parts of the board that have changed this session and load the rest from the server. It took me a bit to work out that we should only need to pause applying changes if an operation intersects a zone that exists but is not local yet. We don't need to do the same 'id juggling' as the former approach (although it's still required for the parts coming from the GM).
+We now have a complication. Each client may only have a portion of the board locally. Ideally, we only want to sync the parts of the board that have changed this session and load the rest from the server. It took me a bit to work out that we should only need to pause applying changes if an operation intersects a zone that exists but is not local yet. We don't need to do the same 'id juggling' as the former approach (although it's still required for the parts coming from the GM).
 
 Part of the above is about keeping info on what zones or sectors are loaded, modified, etc. I spent some time making sure we do this efficiently.
 
