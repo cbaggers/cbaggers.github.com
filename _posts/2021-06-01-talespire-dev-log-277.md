@@ -19,7 +19,7 @@ The last thing I did yesterday was to fix a bug in hide-volumes where, if you ma
 
 Today I focused on [one specific bug](https://github.com/Bouncyrock/TaleSpire-Beta-Public-Issue-Tracker/issues/964). As the excellent report shows, there are cases where copying large slabs caused the game to crash. A board was provided, which, along with the instructions, made it trivial to reproduce the issue. The problem came down to an oversight I made while trying to reuse code.
 
-The batching for slabs is heavily based on the code for batching a single zone. This worked great, but I had missed the fact that the batches allowed a max of 13000 instances per kind of object. This was far more than is needed per zone, but for certain slabs it's not hard to go over that limit (50x6x50 single grass tiles, for example). To handle this, I wrote a new struct where the internal array did not have this limit at the cost of some additional allocations[2].
+The batching for slabs is heavily based on the code for batching a single zone. This worked great, but I had missed the fact that the batches allowed a max of 13000 instances per kind of object. This was far more than is needed per zone, but for certain slabs it's not hard to go over that limit (50x6x50 single grass tiles, for example). To handle this, I wrote a new struct where the internal array did not have this limit at the cost of some additional allocations.
 
 All these fixes are now merged, and so they should ship in the next update.
 
