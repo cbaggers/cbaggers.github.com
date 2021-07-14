@@ -13,7 +13,7 @@ First, to business!
 
 ## Server Maintenance
 
-At 3am PT, we will be taking down the servers for maintenance (click here for the time in your timezone). 
+At 3am PT, we will be taking down the servers for maintenance ([click here for the time in your timezone](https://www.timeanddate.com/countdown/generic?p0=187&iso=20210715T12&msg=TaleSpire%20Server%20Maintenance)). 
 
 We are scheduling one hour for the work, but it is likely to be less than that.
 
