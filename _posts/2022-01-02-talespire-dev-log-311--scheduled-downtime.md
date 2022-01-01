@@ -16,3 +16,5 @@ We have scheduled two hours for the maintenance, but if all goes smoothly, it wi
 The upgrades aim to fix a logging issue we have had for a while and add the code for the upcoming HeroForge integration.
 
 Have a great weekend folks.
+
+p.s. Please note, this does not mean that HeroForge support will be available immediately after this upgrade. This is just one step in the process. We will keep you posted with news as it develops
