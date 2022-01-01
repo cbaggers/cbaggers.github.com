@@ -9,7 +9,7 @@ tags: ['Bouncyrock', 'TaleSpire']
 
 Happy new year!
 
-We will be performing server upgrades at 11:00 UTC on Monday, the 3rd of January. You can see what time that is in your region here https://www.timeanddate.com/worldclock/fixedtime.html?msg=TaleSpire+Sever+Maintenance&iso=20220103T12&p1=187&ah=2
+We will be performing server upgrades at 11:00am UTC on Monday, the 3rd of January. You can see what time that is in your region here https://www.timeanddate.com/worldclock/fixedtime.html?msg=TaleSpire+Sever+Maintenance&iso=20220103T12&p1=187&ah=2
 
 We have scheduled two hours for the maintenance, but if all goes smoothly, it will take much less than that. During the update, the servers will be unavailable or unreliable.
 
