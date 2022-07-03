@@ -44,9 +44,9 @@ We'll have full instructions and warnings out on the day.
 
 ## Dev Stream
 
-[Dev Steam World Clock](https://www.timeanddate.com/worldclock/fixedtime.html?msg=TaleSpire+Dev+Stream&iso=20220714T23)
+[Dev Steam World Clock](https://www.timeanddate.com/worldclock/fixedtime.html?msg=TaleSpire+Dev+Log&iso=20220707T23&p1=187&ah=2)
 
-Yup, we are finally doing a dev stream again. We will be live on [twitch.tv/bouncyrock](https://www.twitch.tv/bouncyrock) this Thursday at 11pm Norway time (click the [link](https://www.timeanddate.com/worldclock/fixedtime.html?msg=TaleSpire+Dev+Stream&iso=20220714T23) above to see the time in your timezone.
+Yup, we are finally doing a dev stream again. We will be live on [twitch.tv/bouncyrock](https://www.twitch.tv/bouncyrock) this Thursday at 11pm Norway time (click the [link](https://www.timeanddate.com/worldclock/fixedtime.html?msg=TaleSpire+Dev+Log&iso=20220707T23&p1=187&ah=2) above to see the time in your timezone.
 
 This will be a general catchup. As usual, you'll have the opportunity to fire questions at us too.
 
