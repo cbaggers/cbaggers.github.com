@@ -91,7 +91,7 @@ With this new tool in hand, I decided to move the code that applies build change
 
 This meant that, while we still needed to do the work, we hid it behind the work on the render thread.
 
-![](/assets/images/macPerf04.png)
+![](/assets/images/macPerf05.png)
 
 
 ## Part 5 - What elephant?
