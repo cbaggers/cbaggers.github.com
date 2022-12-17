@@ -14,7 +14,7 @@ In [log 364](https://bouncyrock.com/news/articles/talespire-dev-log-364), Ree ta
 
 To trigger the bug, you have a light (which renders its volume without writing to depth buffer), and then you have something modify the depth in that area. What is extra odd is that it requires that you forward-render something for it to show up. It's super weird. Check out this daft shit:
 
-![wat]()
+![wat](/assets/videos/macGlitch.gif)
 
 Looking at the Metal frame trace in XCode, the most obviously wrong thing is that the GPU actions from later command-buffers seem to be executed in an earlier command encoder. I don't know enough about Metal to work out why this is causing the errors, but it is feasible that it's related.
 
