@@ -10,6 +10,7 @@ tags: ['Bouncyrock', 'TaleSpire']
 It's time for a video dev log.
 
 <iframe class="video" src="https://www.youtube.com/watch?v=PGAjRoe7n4U?feature=oembed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PGAjRoe7n4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 While I have you here, I'm going to abuse this reach I have to pimp something non-talespire, and even non-ttrpg related.
 
