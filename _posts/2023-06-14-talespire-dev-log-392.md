@@ -35,7 +35,7 @@ There is *one* part that works, however. You'll notice that, when entering the u
 
 This "isolation mode" is a helpful tool in its own right, so we have made it available in the building tools menu.
 
-![issolation mode](/assets/videos/issolationMode1.mp4)
+![isolation mode](/assets/videos/isolationMode1.gif)
 
 Also, this feature already works despite being an accidental release, so we've left it in. At least that way, you folks get something useful out of my screw-ups!
 
