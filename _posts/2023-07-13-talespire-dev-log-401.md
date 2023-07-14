@@ -1,3 +1,12 @@
+---
+layout: post
+title: TaleSpire Dev Log 401 - Macinations
+description:
+date: 2023-07-13 17:02:00
+category:
+tags: ['Bouncyrock', 'TaleSpire']
+---
+
 Heya folks!
 
 Today I come with a screenshot.
