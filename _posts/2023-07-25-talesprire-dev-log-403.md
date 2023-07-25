@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TaleSprire Dev Log 403
+title: TaleSpire Dev Log 403
 description:
 date: 2023-07-25 09:14:26
 category:
