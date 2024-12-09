@@ -15,7 +15,7 @@ To give myself something fun to jump back into, I looked at a performance proble
 
 Picking in TaleSpire is pixel-perfect. This is critical for moving in crowded spaces. We don't pick based on physics colliders as a good collider doesn't necessarily match the shape of the object exactly (if you are curious, do check out [this dev log](https://bouncyrock.com/news/articles/talespire-dev-log-254)).
 
-Instead, we render pickable things from the scene in a specific way and read back the thing the mouse is over the very next frame. That "very next frame" bit is important as we don't want things to feel sluggish. However, reading back data so soon is generally not how the GPU would prefer to work. If you try to read data back from somewhere the GPU was using, it wants to wait until it's done everything it was doing, and this causes a huge delay. Luckily, MJP's post [over here](https://www.gamedev.net/forums/topic/691724-gpu-write-cpu-read/5354495/) explained a feature in DirectX that we can use to read data back the next frame without stalling the rendering. 
+Instead, we render pickable things from the scene in a specific way and read back the thing the mouse is over the very next frame. That "very next frame" bit is important as we don't want things to feel sluggish. However, reading back data so soon is generally not how the GPU would prefer to work. If you try to read data back from somewhere the GPU was using, it wants to wait until it's done everything it was doing, and this causes a huge delay. Luckily, MJP's post [over here](https://www.gamedev.net/forums/topic/691724-gpu-write-cpu-read/5354495/) explained a feature in DirectX that we can use to read data back the next frame without stalling the rendering.
 We've used this for ages, and it's been great, but there are cases where it has not worked.
 
 My laptop is a Thinkpad with an integrated GPU (Intel UHD Graphics 620), and it runs terribly on an **empty board** in TaleSpire. I got out the profiler and saw this:
@@ -26,7 +26,7 @@ Jumpin' Jesus, what is going on with `PixelPicker.FetchSingleResult`?
 
 ### The theory
 
-If I recall correctly, Unity will try to overlap the rendering of frames (this is a good thing), so my theory is that something is touching the buffer that holds the picking results too soon, causing a stall. 
+If I recall correctly, Unity will try to overlap the rendering of frames (this is a good thing), so my theory is that something is touching the buffer that holds the picking results too soon, causing a stall.
 
 Mitigating this could be really simple. We can just add a second buffer and switch between them each frame. That way, we don't get any accidental prodding of the resources.
 
@@ -34,7 +34,7 @@ Mitigating this could be really simple. We can just add a second buffer and swit
 
 Let's not beat around the bush.
 
-![Profiler graph showing the picking delay has now gone](/assets/images/laptopPerfIssue0.png)
+![Profiler graph showing the picking delay has now gone](/assets/images/laptopPerfIssue1.png)
 
 Yeah, that's much better. The time to fetch the result is insignificant now (from 22ms down to 0.003ms or something in that area).
 
