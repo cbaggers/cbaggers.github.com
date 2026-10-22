@@ -19,7 +19,7 @@ The improvement I finished today is that the debug button now lives on the nav-b
 
 That looks like this:
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/HOzznBBUSfE?si=1VqwkiMrzsaV3Rdb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/HOzznBBUSfE?si=T54-2tL_lyLfyPi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Hah, I just spotted a typo in the notification. Ah well, on the todo list it goes :P
 
